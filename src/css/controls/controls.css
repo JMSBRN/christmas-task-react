@@ -1,0 +1,12 @@
+@import './filter.css';
+@import './range.css';
+@import './sort.css';
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1600px;
+  font-size: 20px;
+  line-height: 40px;
+}

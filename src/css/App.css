@@ -1,0 +1,19 @@
+@import './header.css';
+@import './footer.css';
+@import './controls/controls.css';
+@import './cards/cards.css';
+
+
+
+.App {
+  margin: 0, auto;
+  padding: 0;
+  box-sizing: border-box;
+  width: 1920;
+  height: 95vh;
+  background-image: url('../components/assets/images/bg1.jpg');
+  background-size: cover;
+}
+
+
+

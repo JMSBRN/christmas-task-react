@@ -1,0 +1,19 @@
+.card {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 304px;
+	height: 280px;
+	padding: 0;
+	padding-left: 10px;
+	border-radius: 10px;
+	border: 1px solid #278D9F;
+	background-color: rgba(31, 112, 127, .3);
+	backdrop-filter: blur(6px);
+	cursor: pointer;
+} 
+
+.card-img {
+	width: 48px;
+	height: 48px;
+}
