@@ -3,17 +3,34 @@
 @import '../components/controls/controls.css';
 @import '../components/cards/cards.css';
 @import './noUI.css';
+@import './main.css';
 
-
-
-.App {
-  margin: 0, auto;
-  padding: 0;
+* {
   box-sizing: border-box;
-  width: 1920;
-  height: 100%;
-  background-image: url('../components/assets/images/bg1.jpg');
+}
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+body {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.page {
+  min-width: 100%;
+  min-height: calc(100vh - 140px);
+  background-image: url(../components/assets/images/bg1.jpg);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 

@@ -2,7 +2,13 @@
 @import './range.css';
 @import './sort.css';
 
+
+
 .controls {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -11,9 +17,13 @@
   line-height: 40px;
 }
 
+
 .controls-title {
   display: block;
   height: 60px;
   line-height: 60px;
   text-transform: uppercase;
 }
+
+
+

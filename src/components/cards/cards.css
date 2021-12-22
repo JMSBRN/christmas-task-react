@@ -1,4 +1,7 @@
 @import './card.css';
+
+
+
 .cards {
 	display: flex;
 	flex-wrap: wrap;

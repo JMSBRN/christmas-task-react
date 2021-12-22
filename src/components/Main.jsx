@@ -6,8 +6,10 @@ import Controls from './controls/Controls'
 const Main = () => {
 	return (
 		<div className='main'>
-		  <Controls/>
-			<Cards/>
+		  <div className="blur">
+				<Controls/>
+				<Cards/>
+			</div>
 		</div>
 	)
 }
