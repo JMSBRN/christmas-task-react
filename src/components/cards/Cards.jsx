@@ -5,11 +5,6 @@ const Cards = () => {
 	return (
 		<div className='cards'>
 			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
 		</div>
 	)
 }
