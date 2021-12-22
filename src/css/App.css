@@ -2,6 +2,7 @@
 @import './footer.css';
 @import '../components/controls/controls.css';
 @import '../components/cards/cards.css';
+@import './noUI.css';
 
 
 
@@ -10,7 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   width: 1920;
-  height: 95vh;
+  height: 100%;
   background-image: url('../components/assets/images/bg1.jpg');
   background-size: cover;
 }
