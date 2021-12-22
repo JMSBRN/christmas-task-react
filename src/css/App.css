@@ -1,7 +1,7 @@
 @import './header.css';
 @import './footer.css';
-@import './controls/controls.css';
-@import './cards/cards.css';
+@import '../components/controls/controls.css';
+@import '../components/cards/cards.css';
 
 
 
