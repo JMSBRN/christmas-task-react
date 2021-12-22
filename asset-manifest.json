@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/christmas-task-react/static/css/main.72cbcba3.css",
-    "main.js": "/christmas-task-react/static/js/main.7fead872.js",
+    "main.css": "/christmas-task-react/static/css/main.9cc051f8.css",
+    "main.js": "/christmas-task-react/static/js/main.513920e2.js",
     "static/media/bg1.jpg": "/christmas-task-react/static/media/bg1.65a1ad87f9bc2daf6407.jpg",
     "static/media/toy.svg": "/christmas-task-react/static/media/toy.d8ea3c174fc8fb9000e3.svg",
     "static/media/1.png": "/christmas-task-react/static/media/1.53f0fb0d6d6e27697cb5.png",
@@ -15,11 +15,11 @@
     "static/media/bell.svg": "/christmas-task-react/static/media/bell.bb18e4cea62da25074aa.svg",
     "static/media/ball.svg": "/christmas-task-react/static/media/ball.02ba2b1b2ea99d65f6d4.svg",
     "index.html": "/christmas-task-react/index.html",
-    "main.72cbcba3.css.map": "/christmas-task-react/static/css/main.72cbcba3.css.map",
-    "main.7fead872.js.map": "/christmas-task-react/static/js/main.7fead872.js.map"
+    "main.9cc051f8.css.map": "/christmas-task-react/static/css/main.9cc051f8.css.map",
+    "main.513920e2.js.map": "/christmas-task-react/static/js/main.513920e2.js.map"
   },
   "entrypoints": [
-    "static/css/main.72cbcba3.css",
-    "static/js/main.7fead872.js"
+    "static/css/main.9cc051f8.css",
+    "static/js/main.513920e2.js"
   ]
 }
