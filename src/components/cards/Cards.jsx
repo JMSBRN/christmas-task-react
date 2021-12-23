@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from './Card';
+import data from '../data'
+
+
 
 const Cards = () => {
+
+	const [cards, setcards] = useState(data);
+
 	return (
 		<div className='cards'>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
+			{cards.map(card =>
+				<Card card = {card}/>
+				)}
 		</div>
 	)
 }

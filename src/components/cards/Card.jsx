@@ -1,20 +1,24 @@
-import {React} from "react";
-import imageBall from '../assets/toys/1.png'
+import React from "react";
+import images from '../assets/toys/1.png'
 
+const Card = (props) => {
 
-const Card = () => {
+ images = require(`../assets/toys/${props.card.num}.png`);
+
+ console.log(images);
+
 	return (
 		 
-		<div className="card" data-num="">  
-    <h2 className="card-title">Красный матовый шар</h2>
-    <img className="card-img" src= {imageBall} alt="toy"/>
+		<div className="card" data-num={props.card.num}>  
+    <h2 className="card-title">{props.card.name}</h2>
+    <img className="card-img" src={images} alt="toy"/>
     <div className="card-description">      
-      <p className="count">Количество:<span>3</span></p>
-      <p className="year">Год покупки:<span>1990</span></p>
-      <p className="shape">Форма:<span>шар</span></p>
-      <p className="color">Цвет:<span>красный</span></p>
-      <p className="size">Размер:<span>большой</span></p>
-      <p className="favorite">Любимая:<span>нет</span></p>
+      <p className="count">Количество:<span>{props.card.count}</span></p>
+      <p className="year">Год покупки:<span>{props.card.year}</span></p>
+      <p className="shape">Форма:<span>{props.card.shape}</span></p>
+      <p className="color">Цвет:<span>{props.card.color}</span></p>
+      <p className="size">Размер:<span>{props.card.size}</span></p>
+      <p className="favorite">Любимая:<span>{props.card.favorite}</span></p>
     </div>
     <div className="ribbon"></div>
   </div>
