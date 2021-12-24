@@ -2,7 +2,7 @@ import React from 'react'
 
 const Button = (props) => {
 	return (
-		<button className={`${props.clasName}`}>{props.txt}</button>
+		<button className={`${props.className}`}>{props.text}</button>
 	)
 }
 
