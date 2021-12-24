@@ -1,13 +1,13 @@
 import React from 'react'
 import Filters from './Filters'
-import Range from './Range'
+import Ranges from './Ranges'
 import Sort from './Sort'
 
 const Controls = () => {
 	return (
 		<div className='controls'>
 			<Filters/>
-			<Range/>
+			<Ranges/>
 			<Sort/>
 		</div>
 	)
