@@ -1,15 +1,17 @@
 import React from 'react'
+import SelectSort from '../UI/SelectSort';
 
-const Sort = () => {
+const Sort = (props) => {
 	return (
 		<div className="sort">
 		<div className="controls-title">Сортировка</div>
-		<select className="sort-select">
-			<option selected="" value="sort-name-max">По названию от «А» до «Я»</option>
-			<option value="sort-name-min">По названию от «Я» до «А»</option>
-			<option value="sort-count-max">По количеству по возрастанию</option>
-			<option value="sort-count-min">По количеству по убыванию</option>
-		</select>
+	    <SelectSort 
+			 selectedOption={"По названию от «А» до «Я»"}
+			 optionOne={"По названию от «А» до «Я»"}
+			 optionTow={"По количеству по возрастанию"}
+			 optionThree={"По количеству по убыванию"}
+			
+			/>
 		<button className="reset">Сброс фильтров</button>
 	</div>
 	)
