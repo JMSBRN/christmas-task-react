@@ -1,32 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ButtonColors from '../UI/ButtonColors'
+import ButtonShapes from '../UI/ButtonShapes'
+import ButtonSizes from '../UI/ButtonSizes'
+
+
+ const shapesArr = ["шар", "колокольчик", "шишка", "снежинка","фигурка"]
+ const colorsArr = ["белый","желтый", "красный","синий","зелёный"]
+ const sizesArr = ["большой","средний","малый",]
+
 
 const Filters = () => {
+
+  const [shapes] = useState(shapesArr)
+  const [colors] = useState(colorsArr)
+  const [sizes] = useState(sizesArr)
 	return (
-		<div class="filters">
-        <div class="controls-title">Фильтры по значению</div>
-        <div class="shape">Форма:  
-          <button data-filter="шар"></button>
-          <button data-filter="колокольчик"></button>
-          <button data-filter="шишка"></button>
-          <button data-filter="снежинка"></button>
-          <button data-filter="фигурка"></button>
+		<div className="filters">
+        <div className="controls-title">Фильтры по значению</div>
+        <div className="shape">Форма:  
+          {shapes.map(shape => 
+              <ButtonShapes shape={shape}/>
+            )}
         </div>
-        <div class="color">Цвет:   
-          <button data-filter="белый"></button>
-          <button data-filter="желтый"></button>
-          <button data-filter="красный"></button>
-          <button data-filter="синий"></button>
-          <button data-filter="зелёный"></button>
+        <div className="color">Цвет:   
+          {colors.map(color => 
+             <ButtonColors color={color}/>
+            )}
         </div>
-        <div class="size">Размер: 
-          <button data-filter="большой"></button>
-          <button data-filter="средний"></button>
-          <button data-filter="малый"></button>
+        <div className="size">Размер: 
+          {sizes.map(size => 
+           <ButtonSizes size ={size}/>
+            )}
         </div>
-        <div class="favorite-container">Только любимые:
-          <div class="form-group">
-            <input type="checkbox" class="favorite-input" id="checkbox"/>
-            <label for="checkbox" class="favorite-input-label"></label>
+        <div className="favorite-container">Только любимые:
+          <div className="form-group">
+            <input type="checkbox" className="favorite-input" id="checkbox"/>
+            <label for="checkbox" className="favorite-input-label"></label>
           </div>   
         </div> 
         

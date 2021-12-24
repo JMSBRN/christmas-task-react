@@ -5,8 +5,6 @@ const Card = (props) => {
 
  images = require(`../assets/toys/${props.card.num}.png`);
 
- console.log(images);
-
 	return (
 		 
 		<div className="card" data-num={props.card.num}>  
