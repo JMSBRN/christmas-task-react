@@ -11,7 +11,7 @@ const Cards = () => {
 	return (
 		<div className='cards'>
 			{cards.map(card =>
-				<Card card = {card}/>
+				<Card key = {card.num} card = {card}/>
 				)}
 		</div>
 	)

@@ -15,7 +15,7 @@ const Range = (props) => {
 						<div className="noUi-origin" >
 							<div className="noUi-handle noUi-handle-lower"
 								data-handle={props.dataHamndler}
-								tabindex={props.tabIndex}
+								tabIndex={props.tabIndex}
 								role={props.role}
 								aria-orientation={props.ariaOrientation}
 								aria-valuemin={props.ariaValuemin}
@@ -29,7 +29,7 @@ const Range = (props) => {
 						<div className="noUi-origin">
 							<div className="noUi-handle noUi-handle-upper"
 								data-handle={props.dataHamndler}
-								tabindex={props.tabIndex}
+								tabIndex={props.tabIndex}
 								role={props.role}
 								aria-orientation={props.ariaOrientation}
 								aria-valuemin={props.ariaValuemin}

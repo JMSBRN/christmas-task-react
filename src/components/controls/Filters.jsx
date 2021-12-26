@@ -11,31 +11,31 @@ import ButtonSizes from '../UI/ButtonSizes'
 
 const Filters = () => {
 
-  const [shapes] = useState(shapesArr)
-  const [colors] = useState(colorsArr)
-  const [sizes] = useState(sizesArr)
+  const [shapes, setShapes] = useState(shapesArr)
+  const [colors, setColors] = useState(colorsArr)
+  const [sizes, setSizes] = useState(sizesArr)
 	return (
 		<div className="filters">
         <div className="controls-title">Фильтры по значению</div>
         <div className="shape">Форма:  
           {shapes.map(shape => 
-              <ButtonShapes shape={shape}/>
+              <ButtonShapes key = {shape} shape={shape}/>
             )}
         </div>
         <div className="color">Цвет:   
           {colors.map(color => 
-             <ButtonColors color={color}/>
+             <ButtonColors key = {color} color={color}/>
             )}
         </div>
         <div className="size">Размер: 
           {sizes.map(size => 
-           <ButtonSizes size ={size}/>
+           <ButtonSizes key={size} size ={size}/>
             )}
         </div>
         <div className="favorite-container">Только любимые:
           <div className="form-group">
             <input type="checkbox" className="favorite-input" id="checkbox"/>
-            <label for="checkbox" className="favorite-input-label"></label>
+            <label htmlFor="checkbox" className="favorite-input-label"></label>
           </div>   
         </div> 
         

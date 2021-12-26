@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Button from '../UI/Button';
 import SelectSort from '../UI/SelectSort';
+import Data from '../data'
+
+
 
 const Sort = () => {
 	return (
@@ -8,7 +11,7 @@ const Sort = () => {
 		<div className="controls-title">Сортировка</div>
 	    <SelectSort 
 			 selectedOption={"По названию от «А» до «Я»"}
-			 optionOne={"По названию от «А» до «Я»"}
+			 optionOne={"По названию от «Я» до «А»"}
 			 optionTwo={"По количеству по возрастанию"}
 			 optionThree={"По количеству по убыванию"}
 			
