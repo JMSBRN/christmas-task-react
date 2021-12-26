@@ -1,8 +1,16 @@
 import React from 'react'
 
 const ButtonSizes = (props) => {
+
+
+	function setSize(){
+
+		console.log(props.size);
+
+		
+	}
 	return (
-		<button data-filter ={props.size}></button>
+		<button onClick={setSize} data-filter ={props.size}></button>
 	)
 }
 

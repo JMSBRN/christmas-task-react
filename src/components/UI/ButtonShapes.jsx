@@ -1,9 +1,17 @@
 import React from 'react'
 
 const ButtonShapes = (props) => {
+
+	
+
+
 	return (
 
-	  <button data-filter ={props.shape}></button>
+	  <button
+		 onClick={props.onClick} 
+		 value={props.shape} 
+		 data-filter ={props.shape}
+		 ></button>
 	)
 }
 

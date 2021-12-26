@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 import Button from '../UI/Button';
 import SelectSort from '../UI/SelectSort';
-import Data from '../data'
-
 
 
 const Sort = () => {

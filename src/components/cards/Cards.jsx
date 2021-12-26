@@ -4,9 +4,28 @@ import data from '../data'
 
 
 
+// function sortedArr () {
+
+// 	return data.sort((a, b) => a.color > b.color ? 1 : -1);
+// }
+
+// sortedArr()
+
+
+
+const sortedArrayByShape =  data.filter((el) => {
+
+	if (el.shape.includes('шар')) {
+
+		return data;
+
+	}
+
+} );
+
 const Cards = () => {
 
-	const [cards, setcards] = useState(data);
+	const [cards, setcards] = useState(sortedArrayByShape);
 
 	return (
 		<div className='cards'>
