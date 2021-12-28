@@ -5,14 +5,21 @@ import Sort from './Sort'
 
 const Controls = ({onClick}) => {
 
-	const shapeFromFilters = (shape) => {
+const shapeFromFilters = (shape) => {
+	onClick(shape)
+}
+const colorFromFilters = (color) => {
+	onClick(color)
+}
 
-		onClick(shape)
-	}
+const sizeFromFilters = (size) => {
+	onClick(size)
+}
+
 
 	return (
 		<div className='controls'>
-			<Filters onClick={shapeFromFilters}/>
+			<Filters onClick={shapeFromFilters, colorFromFilters, sizeFromFilters}/>
 			<Ranges/>
 			<Sort/>
 		</div>

@@ -3,18 +3,7 @@ import Card from './Card';
 import data from '../data'
 
 
-
-// function sortedArr () {
-
-// 	return data.sort((a, b) => a.color > b.color ? 1 : -1);
-// }
-
-// sortedArr()
-
-
-
-
-const Cards = ({shape}) => {
+const Cards = ({shape, color, size}) => {
 
 
 const sortedArrayByShape =  data.filter((el) => {
@@ -27,11 +16,25 @@ const sortedArrayByShape =  data.filter((el) => {
 
 } );
 
-    
+ const sortedArrayByColor =  sortedArrayByShape.filter((el) => {
+
+	if (el.color.includes(color)){
+		return data
+	}
+ })
+
+ const sortedArrayBySize = sortedArrayByColor.filter((el) => {
+
+	if (el.size.includes(size)){
+		return data
+	}
+ })
+
+ console.log(sortedArrayBySize);
 
 	return (
 		<div className='cards'>
-			{sortedArrayByShape.map(card =>
+			{sortedArrayBySize.map(card =>
 				<Card key = {card.num} card = {card}/>
 				)}
 		</div>
