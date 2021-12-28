@@ -12,34 +12,21 @@ import dataArr from '../data'
 
  
 
-const Filters = () => {
+const Filters = ({onClick}) => {
   
 
-  const [data, setData] = useState(dataArr)
   const [shapes] = useState(shapesArr)
   const [colors] = useState(colorsArr)
   const [sizes] = useState(sizesArr)
+ 
   
   function getShape (e) {
     
-  return e.target.value;
+  onClick(e.target.value);
 
 
   }
 
- 
-  const sortedArrayByShape =  data.filter((el) => {
-  
-    if (el.shape.includes('шар')) {
-     
-    return data;
-  
-    }
-  
-  } );
-
-  console.log(sortedArrayByShape);
- 
 
 	return (
 		<div className="filters">

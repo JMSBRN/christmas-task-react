@@ -13,23 +13,25 @@ import data from '../data'
 
 
 
+
+const Cards = ({shape}) => {
+
+
 const sortedArrayByShape =  data.filter((el) => {
+ 
+	if (el.shape.includes(shape)) {
 
-	if (el.shape.includes('шар')) {
-
-		return data;
+	return data;
 
 	}
 
 } );
 
-const Cards = () => {
-
-	const [cards, setcards] = useState(sortedArrayByShape);
+    
 
 	return (
 		<div className='cards'>
-			{cards.map(card =>
+			{sortedArrayByShape.map(card =>
 				<Card key = {card.num} card = {card}/>
 				)}
 		</div>

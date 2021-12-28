@@ -3,10 +3,16 @@ import Filters from './Filters'
 import Ranges from './Ranges'
 import Sort from './Sort'
 
-const Controls = () => {
+const Controls = ({onClick}) => {
+
+	const shapeFromFilters = (shape) => {
+
+		onClick(shape)
+	}
+
 	return (
 		<div className='controls'>
-			<Filters/>
+			<Filters onClick={shapeFromFilters}/>
 			<Ranges/>
 			<Sort/>
 		</div>
