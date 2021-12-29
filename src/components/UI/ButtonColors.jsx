@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const ButtonColors = (props) => {
+const ButtonColors = ({onClick}) => {
 
+	const colorsArr = ["белый","желтый", "красный","синий","зелёный"]
+	const [colors] = useState(colorsArr)
+
+	function getColor (e) { 
+    onClick(e.target.value);
+    }
 
 	return (
-		<button 
-		onClick={props.onClick}
-		value={props.value} 
-		data-filter ={props.color}></button>
+		<div className="color">Цвет:   
+		{colors.map(color => 
+			 <button onClick={getColor} value={color} key = {color} color={color}/>
+			)}
+	</div>
 	)
 }
 

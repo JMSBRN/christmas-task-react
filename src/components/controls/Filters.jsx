@@ -1,62 +1,28 @@
-import React, { useState } from 'react'
+
 import ButtonColors from '../UI/ButtonColors'
 import ButtonShapes from '../UI/ButtonShapes'
 import ButtonSizes from '../UI/ButtonSizes'
 
-
- const shapesArr = ["шар", "колокольчик", "шишка", "снежинка","фигурка"]
- const colorsArr = ["белый","желтый", "красный","синий","зелёный"]
- const sizesArr = ["большой","средний","малый",]
-
-
- 
-
 const Filters = ({onClick}) => {
-  
 
-  const [shapes] = useState(shapesArr)
-  const [colors] = useState(colorsArr)
-  const [sizes] = useState(sizesArr)
- 
-
-  
-
-  function getShape (e) {
-    onClick(e.target.value);
-    handleToggle();
-  }
-
-  function getColor (e) { 
-    onClick(e.target.value);
+    const choiceFromButShapes = (choice) => {
+      onClick(choice)
     }
-  function getSize (e) { 
-    onClick(e.target.value);
+
+    const choiceFromButColors = (choice) => {
+      onClick(choice)
     }
-  
-    const [isActive, setActive] = useState("false");
 
-    function handleToggle  ()  {
-      setActive(!isActive);  };
+    const choiceFromButSizes = (choice) => {
+      onClick(choice)
+    }
  
-
 	return (
 		<div className="filters">
         <div className="controls-title">Фильтры по значению</div>
-        <div className="shape">Форма:  
-          {shapes.map(shape => 
-              <ButtonShapes className={isActive ? "active" : null} onClick={getShape} key = {shape} value = {shape} shape={shape}/>
-            )}
-        </div>
-        <div className="color">Цвет:   
-          {colors.map(color => 
-             <ButtonColors onClick={getColor} value={color} key = {color} color={color}/>
-            )}
-        </div>
-        <div className="size">Размер: 
-          {sizes.map(size => 
-           <ButtonSizes onClick={getSize} value={size} key={size} size ={size}/>
-            )}
-        </div>
+        <ButtonShapes onClick={choiceFromButShapes} />
+        <ButtonColors onClick={choiceFromButColors}/>
+        <ButtonSizes  onClick={choiceFromButSizes}/>
         <div className="favorite-container">Только любимые:
           <div className="form-group">
             <input type="checkbox" className="favorite-input" id="checkbox"/>
