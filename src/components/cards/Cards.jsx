@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import Card from './Card';
-import data from '../data'
+import dataAr from '../data'
 
 
 const Cards = ({choice}) => {
+
+
+	const [data, setData] = useState(dataAr)
+
 
 
 const sortedArray =  data.filter((el) => {

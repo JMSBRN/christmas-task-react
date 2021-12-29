@@ -18,9 +18,12 @@ const Filters = ({onClick}) => {
   const [colors] = useState(colorsArr)
   const [sizes] = useState(sizesArr)
  
+
   
+
   function getShape (e) {
     onClick(e.target.value);
+    handleToggle();
   }
 
   function getColor (e) { 
@@ -30,13 +33,18 @@ const Filters = ({onClick}) => {
     onClick(e.target.value);
     }
   
+    const [isActive, setActive] = useState("false");
+
+    function handleToggle  ()  {
+      setActive(!isActive);  };
+ 
 
 	return (
 		<div className="filters">
         <div className="controls-title">Фильтры по значению</div>
         <div className="shape">Форма:  
           {shapes.map(shape => 
-              <ButtonShapes onClick={getShape} key = {shape} value = {shape} shape={shape}/>
+              <ButtonShapes className={isActive ? "active" : null} onClick={getShape} key = {shape} value = {shape} shape={shape}/>
             )}
         </div>
         <div className="color">Цвет:   

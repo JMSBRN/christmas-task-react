@@ -7,7 +7,9 @@ const ButtonSizes = (props) => {
 		<button 
 		onClick={props.onClick}
 		value={props.size}
-		data-filter ={props.size}></button>
+		data-filter ={props.size} 
+		>
+		</button>
 	)
 }
 
