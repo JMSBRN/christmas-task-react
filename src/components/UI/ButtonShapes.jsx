@@ -9,18 +9,24 @@ const ButtonShapes = ({onClick}) => {
 	
   function getShape (e) {
     onClick(e.target.value);
-    handleToggle();
+    setActiveClass(e);
   }
 
-	function handleToggle  ()  {
-		setActive(!isActive);  };
+
+		function setActiveClass (e){
+      if (setActive(!isActive)) {
+
+				
+			}
+			e.target.className = isActive ? "active": null;
+
+		}
 
 	return (
 
 		<div className="shape">Форма:  
 			{shapes.map(shape => 
-					<button 
-					className={isActive ? "active" : null} 
+					<button
 					onClick={getShape} 
 					key = {shape} 
 					value = {shape} 
