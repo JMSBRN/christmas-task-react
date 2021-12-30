@@ -7,7 +7,12 @@ const ButtonColors = ({onClick}) => {
 
 	function getColor (e) { 
     onClick(e.target.value);
+		toggleActiveClass(e);
     }
+
+		function toggleActiveClass (e){
+			e.target.classList.toggle("active");
+		 }
 
 	return (
 		<div className="color">Цвет:   

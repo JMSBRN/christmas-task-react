@@ -7,7 +7,12 @@ const ButtonSizes = ({onClick}) => {
  	  
   function getSize (e) { 
     onClick(e.target.value);
+		toggleActiveClass(e);
     }
+
+		function toggleActiveClass (e){
+			e.target.classList.toggle("active");
+		 }
   
 	return (
 		<div className="size">Размер: 

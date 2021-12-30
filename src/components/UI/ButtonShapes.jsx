@@ -33,11 +33,3 @@ const ButtonShapes = ({onClick}) => {
 
 export default ButtonShapes
 
-
-
- // <button
-		//  className={props.className}
-		//  onClick={props.onClick} 
-		//  value={props.shape} 
-		//  data-filter ={props.shape}
-		//  ></button>
