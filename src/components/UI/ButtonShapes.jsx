@@ -5,21 +5,16 @@ const ButtonShapes = ({onClick}) => {
 	const shapesArr = ["шар", "колокольчик", "шишка", "снежинка","фигурка"]
 	
 	const [shapes] = useState(shapesArr)
-	const [isActive, setActive] = useState("false");
+	
 	
   function getShape (e) {
     onClick(e.target.value);
-    setActiveClass(e);
+    toggleActiveClass(e);
   }
 
 
-		function setActiveClass (e){
-      if (setActive(!isActive)) {
-
-				
-			}
-			e.target.className = isActive ? "active": null;
-
+		function toggleActiveClass (e){
+  	 e.target.classList.toggle("active");
 		}
 
 	return (
