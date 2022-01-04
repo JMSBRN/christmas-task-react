@@ -1,40 +1,42 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from './Card';
 import dataAr from '../data'
 
 
-const Cards = ({choice}) => {
+const Cards = ({filters}) => {
 
+const [data, setData] = useState(dataAr)
 
-	const [data, setData] = useState(dataAr)
-
-
-
-const sortedArray =  data.filter((el) => {
- 
-	if (
-
-		el.shape.includes(choice) ||
-		el.color.includes(choice) ||
-		el.size.includes(choice)  
+ const sortArr = data.filter(el => {
+   
+	  if(
+			
+			filters.shape.includes(el.shape) ||
+			filters.color.includes(el.color) ||
+			filters.size.includes(el.size) 
 		
-		) {
+		){
 
-	return data;
+			
+			return data;
+		}
 
-	}
+ })
 
-} );
-
-
+ console.log(filters);
+  
 
 	return (
 		<div className='cards'>
-			{sortedArray.map(card =>
+			{sortArr.map(card =>
 				<Card key = {card.num} card = {card}/>
 				)}
+
 		</div>
 	)
+
+
+
 }
 
 export default Cards;

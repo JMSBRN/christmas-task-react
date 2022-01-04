@@ -17,7 +17,13 @@ const ButtonColors = ({onClick}) => {
 	return (
 		<div className="color">Цвет:   
 		{colors.map(color => 
-			 <button onClick={getColor} value={color} key = {color} color={color}/>
+			 <button 
+				onClick={getColor} 
+				value={color} 
+				key = {color} 
+				color={color}
+				className={''}
+			 />
 			)}
 	</div>
 	)

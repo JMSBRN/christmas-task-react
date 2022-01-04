@@ -5,8 +5,11 @@ import Sort from './Sort'
 
 const Controls = ({onClick}) => {
 
-const choiceFromFilters = (choice) => {
-	onClick(choice)
+const choiceFromFilters = (filters) => {
+	onClick(filters)
+	
+
+	
 }
 
 

@@ -17,7 +17,12 @@ const ButtonSizes = ({onClick}) => {
 	return (
 		<div className="size">Размер: 
 		{sizes.map(size => 
-		 <button onClick={getSize} value={size} key={size} size ={size}/>
+		 <button
+				onClick={getSize}
+				value={size}
+				key={size}
+				size ={size}
+				className={''}/>
 			)}
 	</div>
 	)

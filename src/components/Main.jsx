@@ -5,11 +5,11 @@ import Controls from './controls/Controls'
 
 const Main = () => {
 
-	const [choice, setChoice] = useState('')
+	const [filters, setFilters] = useState({shape: [], color: [], size:[]})
 
 
-	const shapeFromFilters = (choice) => {
-		setChoice(choice)
+	const shapeFromFilters = (filters) => {
+		setFilters(filters)	
 	}
 
 
@@ -17,7 +17,7 @@ const Main = () => {
 		<div className='main'>
 		  <div className="blur">
 				<Controls onClick={shapeFromFilters}/>
-				<Cards  choice={choice}/>
+				<Cards  filters={filters}/>
 			</div>
 		</div>
 	)
