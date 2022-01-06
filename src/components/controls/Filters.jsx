@@ -49,7 +49,6 @@ const Filters = ({ onClick, filters }) => {
           <label htmlFor="checkbox" className="favorite-input-label"></label>
         </div>
       </div>
-
     </div>
   )
 }

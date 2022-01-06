@@ -3,22 +3,25 @@ import Card from './Card';
 import dataAr from '../data'
 
 const Cards = ({filters}) => {
-
 const [data, setData] = useState(dataAr)
 
 useEffect(()=> {  
 	const sortArr = dataAr.filter(el => {
-	  if(
-			filters.shape.includes(el.shape) ||
-			filters.color.includes(el.color) ||
-			filters.size.includes(el.size) 
-		){	
-			return dataAr;
-		}
+		if (filters.shape.length == 0) {
+			return data
+		} else {
+			if(
+				filters.shape.includes(el.shape) ||
+				filters.color.includes(el.color) ||
+				filters.size.includes(el.size) 
+			){	
+				return dataAr;
+			}
+		} 
  })
 
  setData(sortArr)
-},[filters,dataAr]);
+},[filters]);
 
 	return (
 		<div className='cards'>
@@ -28,9 +31,6 @@ useEffect(()=> {
 
 		</div>
 	)
-
-
-
 }
 
 export default Cards;
