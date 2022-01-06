@@ -4,6 +4,7 @@ import ButtonShapes from '../UI/ButtonShapes'
 import ButtonSizes from '../UI/ButtonSizes'
 
 const Filters = ({ onClick, filters }) => {
+
   const choiceFromButShapes = (shape) => {
     const newArr = { ...filters };
     if (!filters.shape.includes(shape)) {
@@ -25,16 +26,32 @@ const Filters = ({ onClick, filters }) => {
     const newArr = { ...filters };
     if (!filters.color.includes(color)) {
       newArr.color.push(color)
-      onClick(newArr)
+      
+    } else {
+      if(filters.color.includes(color)){
+        const index = newArr.color.indexOf(color);
+        if(index !== -1) {
+          newArr.color.splice(index, 1)
+        }
+      }
     }
+
+    onClick(newArr)
   }
 
   const choiceFromButSizes = (size) => {
     const newArr = { ...filters };
     if (!filters.size.includes(size)) {
       newArr.size.push(size)
-      onClick(newArr)
+    } else {
+      if(filters.size.includes(size)){
+        const index = newArr.size.indexOf(size);
+        if(index !== -1) {
+          newArr.size.splice(index, 1)
+        }
+      }
     }
+    onClick(newArr)
   }
 
   return (

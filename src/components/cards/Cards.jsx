@@ -7,7 +7,11 @@ const [data, setData] = useState(dataAr)
 
 useEffect(()=> {  
 	const sortArr = dataAr.filter(el => {
-		if (filters.shape.length == 0) {
+		if (
+			 filters.shape.length == 0 &&
+			 filters.color.length == 0 &&
+			 filters.size.length == 0
+			 ) {
 			return data
 		} else {
 			if(
