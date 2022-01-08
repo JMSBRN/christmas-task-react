@@ -24,7 +24,27 @@ useEffect(()=> {
 		} 
  })
 
- setData(sortArr)
+  const newArr =  sortArr.filter(el => {
+
+		if(
+			el.shape.includes(filters.shape.join(', ')) &&
+			el.color.includes(filters.color.join(', ')) && 
+			el.size.includes(filters.size.join(', ')) 
+			){
+
+				console.log(filters.shape.join(', '));
+				console.log(filters.color.join(', '));
+				console.log(filters.size.join(', '));
+
+			return true
+		}
+	 })
+
+	 console.log(newArr);
+
+
+
+ setData(newArr)
 },[filters]);
 
 	return (
