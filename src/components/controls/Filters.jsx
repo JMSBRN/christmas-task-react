@@ -25,7 +25,7 @@ const Filters = ({ onClick, filters}) => {
       <ButtonShapes onClick={(value)=> choiceFromButton(value, "shape")} />
       <ButtonColors onClick={(value)=> choiceFromButton(value, "color")}  />
       <ButtonSizes onClick={(value)=> choiceFromButton(value, "size") } />
-      <ButtonFavorite onClick={(value)=> choiceFromButton(value, "favorite")}/>
+      <ButtonFavorite onChange={(value)=> choiceFromButton(value, "favorite")}/>
     </div>
   )
 }

@@ -181,12 +181,12 @@
   background-color: #278D9F;
 }
 
-.favorite-input:checked + .favorite-input-label {
+.favorite-input.active + .favorite-input-label {
   background-color: #278D9F;
   border-color: #278D9F;
 }
 
-.favorite-input:checked + .favorite-input-label::after {
+.favorite-input.active + .favorite-input-label::after {
   content: '';
   display: block;
   position: absolute;
@@ -198,3 +198,4 @@
   border-width: 0 4px 4px 0;
   transform: rotate(45deg);
 }
+

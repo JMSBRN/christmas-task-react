@@ -1,13 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const ButtonFavorite = ({onClick}) => {
+const ButtonFavorite = ({onChange}) => {
+	const [checked, setCheked] = useState(false)
+
+
  function	handleCheck (e){
-	onClick(e.target.value)
+	onChange(e.target.checked);
+	changeCheck();
+	toggleActiveClass(e);
  }
+
+ function changeCheck() {
+	setCheked(checked)
+ }
+
+ function toggleActiveClass(e) {
+	console.log(e.target.classList.toggle("active"))
+}
+
 	return (
 		<div className="favorite-container">Только любимые:
 		<div className="form-group">
-			<input value ={"да"} onClick={handleCheck} type="checkbox" className="favorite-input" id="checkbox" />
+			<input checked ={checked}  onChange={handleCheck} type="checkbox" className="favorite-input" id="checkbox" />
 			<label  htmlFor="checkbox" className="favorite-input-label"></label>
 		</div>
 	</div>
