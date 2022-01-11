@@ -1,5 +1,6 @@
 
 import ButtonColors from '../UI/ButtonColors'
+import ButtonFavorite from '../UI/ButtonFavorite'
 import ButtonShapes from '../UI/ButtonShapes'
 import ButtonSizes from '../UI/ButtonSizes'
 
@@ -24,12 +25,7 @@ const Filters = ({ onClick, filters}) => {
       <ButtonShapes onClick={(value)=> choiceFromButton(value, "shape")} />
       <ButtonColors onClick={(value)=> choiceFromButton(value, "color")}  />
       <ButtonSizes onClick={(value)=> choiceFromButton(value, "size") } />
-      <div className="favorite-container">Только любимые:
-        <div className="form-group">
-          <input type="checkbox" className="favorite-input" id="checkbox" />
-          <label htmlFor="checkbox" className="favorite-input-label"></label>
-        </div>
-      </div>
+      <ButtonFavorite onClick={(value)=> choiceFromButton(value, "favorite")}/>
     </div>
   )
 }
