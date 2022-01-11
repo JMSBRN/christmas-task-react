@@ -4,6 +4,7 @@ import Controls from './controls/Controls'
 
 const Main = () => {
 	const [filters, setFilters] = useState({shape: [], color: [], size:[], favorite: []})
+
 	const shapeFromFilters = (filters) => {
 		setFilters(filters)	
 	}
