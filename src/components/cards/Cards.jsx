@@ -5,6 +5,7 @@ import dataAr from '../data'
 const Cards = ({filters}) => {
 const [data, setData] = useState(dataAr)
 
+
 useEffect(()=> {  
 	const sortArr = dataAr.filter(el => (
 		(filters.shape.includes(el.shape) || filters.shape.length === 0 ) &&
@@ -19,7 +20,7 @@ useEffect(()=> {
 	return (
 		<div className='cards'>
 			{data.map(card =>
-				<Card key={card.num} card={card}/>
+				<Card  key={card.num} card={card}/>
 				)}
 		</div>
 	)

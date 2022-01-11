@@ -1,10 +1,8 @@
-import React from "react";
+import React from 'react'
 import images from '../assets/toys/1.png'
 
-const Card = (props) => {
-
+const Card = (props,{toggleClassActive}) => {
  images = require(`../assets/toys/${props.card.num}.png`);
-
  function returnDA (){
   if(props.card.favorite === true){
     return "да"
@@ -13,9 +11,13 @@ const Card = (props) => {
   }
  }
 
+ function toggleClassActive(e){
+   e.target.classList.toggle("active");
+ }
+
 	return (
 		 
-		<div className="card" data-num={props.card.num}>  
+		<div onClick={toggleClassActive} className="card " data-num={props.card.num}>  
     <h2 className="card-title">{props.card.name}</h2>
     <img className="card-img" src={images} alt="toy"/>
     <div className="card-description">      
