@@ -15,7 +15,7 @@ const ButtonFavorite = ({onChange}) => {
  }
 
  function toggleActiveClass(e) {
-	console.log(e.target.classList.toggle("active"))
+	e.target.classList.toggle("active")
 }
 
 	return (

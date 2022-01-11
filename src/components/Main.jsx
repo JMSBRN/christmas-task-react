@@ -7,7 +7,6 @@ const Main = () => {
 	const shapeFromFilters = (filters) => {
 		setFilters(filters)	
 	}
-console.log(filters);
 	return (
 		<div className='main'>
 		  <div className="blur">

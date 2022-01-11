@@ -5,6 +5,14 @@ const Card = (props) => {
 
  images = require(`../assets/toys/${props.card.num}.png`);
 
+ function returnDA (){
+  if(props.card.favorite === true){
+    return "да"
+  }else {
+    return "нет"
+  }
+ }
+
 	return (
 		 
 		<div className="card" data-num={props.card.num}>  
@@ -16,7 +24,7 @@ const Card = (props) => {
       <p className="shape">Форма:<span>{props.card.shape}</span></p>
       <p className="color">Цвет:<span>{props.card.color}</span></p>
       <p className="size">Размер:<span>{props.card.size}</span></p>
-      <p className="favorite">Любимая:<span>{props.card.favorite}</span></p>
+      <p className="favorite">Любимая:<span>{returnDA()}</span></p>
     </div>
     <div className="ribbon"></div>
   </div>

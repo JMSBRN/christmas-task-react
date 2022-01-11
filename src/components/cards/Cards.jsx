@@ -19,7 +19,7 @@ useEffect(()=> {
 	return (
 		<div className='cards'>
 			{data.map(card =>
-				<Card key = {card.num} card = {card}/>
+				<Card key={card.num} card={card}/>
 				)}
 		</div>
 	)
