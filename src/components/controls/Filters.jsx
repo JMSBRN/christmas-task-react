@@ -3,8 +3,11 @@ import ButtonColors from '../UI/ButtonColors'
 import ButtonFavorite from '../UI/ButtonFavorite'
 import ButtonShapes from '../UI/ButtonShapes'
 import ButtonSizes from '../UI/ButtonSizes'
+import { Context } from '../Context'
+import { useContext } from 'react'
 
-const Filters = ({ onClick, filters}) => {
+const Filters = ({ onClick}) => {
+  const filters = useContext(Context)
   const choiceFromButton = (value, form) => {
     const newArr = { ...filters };
     if (!filters[form].includes(value)) {

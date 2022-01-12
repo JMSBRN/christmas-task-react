@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Card from './Card';
 import dataAr from '../data'
+import { Context } from '../Context';
 
-const Cards = ({filters}) => {
+const Cards = () => {
 const [data, setData] = useState(dataAr)
 
-
+const filters = useContext(Context)
 useEffect(()=> {  
 	const sortArr = dataAr.filter(el => (
 		(filters.shape.includes(el.shape) || filters.shape.length === 0 ) &&
