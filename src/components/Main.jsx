@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react'
+import React, { useState} from 'react'
 import Cards from './cards/Cards'
 import Controls from './controls/Controls'
-import {Context} from './Context'
+import {ContextFilters} from './ContextFilters'
 
 const Main = () => {
 	const [filters, setFilters] = useState({shape: [], color: [], size:[], favorite: []})
@@ -11,10 +11,10 @@ const Main = () => {
 	return (
 		<div className='main'>
 		  <div className="blur">
-				<Context.Provider value={filters}>
+				<ContextFilters.Provider value={filters}>
 					<Controls onClick={shapeFromFilters}/>
 					<Cards/>
-				</Context.Provider>
+				</ContextFilters.Provider>
 			</div>
 		</div>
 	)

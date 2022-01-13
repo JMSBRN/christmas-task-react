@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import images from '../assets/toys/1.png'
 
 const Card = (props,{toggleClassActive}) => {
@@ -10,13 +10,10 @@ const Card = (props,{toggleClassActive}) => {
     return "нет"
   }
  }
-
  function toggleClassActive(e){
    e.target.classList.toggle("active");
  }
-
 	return (
-		 
 		<div onClick={toggleClassActive} className="card " data-num={props.card.num}>  
     <h2 className="card-title">{props.card.name}</h2>
     <img className="card-img" src={images} alt="toy"/>
