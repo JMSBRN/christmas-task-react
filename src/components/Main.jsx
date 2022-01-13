@@ -8,11 +8,25 @@ const Main = () => {
 	const shapeFromFilters = (filters) => {
 		setFilters(filters)	
 	}
+	const choiceFromButton = (value, form) => {
+    const newArr = { ...filters };
+    if (!filters[form].includes(value)) {
+      newArr[form].push(value)
+    } else {
+      if (filters[form].includes(value)) {
+        const index = newArr[form].indexOf(value);
+        if (index !== -1) {
+          newArr[form].splice(index, 1);
+        }
+      }
+    }
+    shapeFromFilters(newArr)
+  }
 	return (
 		<div className='main'>
 		  <div className="blur">
-				<ContextFilters.Provider value={filters}>
-					<Controls onClick={shapeFromFilters}/>
+				<ContextFilters.Provider value={{...filters, choiceFromButton}}>
+					<Controls/>
 					<Cards/>
 				</ContextFilters.Provider>
 			</div>

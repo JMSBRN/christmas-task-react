@@ -3,13 +3,10 @@ import Filters from './Filters'
 import Ranges from './Ranges'
 import Sort from './Sort'
 
-const Controls = ({onClick}) => {
-	const choiceFromFilters = (filters) => {
-		onClick(filters)	
-	}
+const Controls = () => {
 		return (
 			<div className='controls'>
-				<Filters  onClick={choiceFromFilters}/>
+				<Filters/>
 			<Ranges/>
 				<Sort/>
 		</div>
