@@ -22,10 +22,14 @@ const Main = () => {
     }
     shapeFromFilters(newArr)
   }
+	function selectedCards() {
+		const selected = document.querySelectorAll('.active');
+		return (selected.length);
+	}
 	return (
 		<div className='main'>
 		  <div className="blur">
-				<ContextFilters.Provider value={{...filters, choiceFromButton}}>
+				<ContextFilters.Provider value={{...filters, choiceFromButton, selectedCards}}>
 					<Controls/>
 					<Cards/>
 				</ContextFilters.Provider>
@@ -33,5 +37,4 @@ const Main = () => {
 		</div>
 	)
 }
-
 export default Main;

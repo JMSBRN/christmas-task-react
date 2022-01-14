@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import images from '../assets/toys/1.png'
+import { ContextFilters } from '../ContextFilters'
 
 const Card = ({card}) => {
+ const {selectedCards}= useContext(ContextFilters)
  images = require(`../assets/toys/${card.id}.png`);
  function returnDA (){
   if(card.favorite === true){
@@ -12,9 +14,8 @@ const Card = ({card}) => {
  }
  function toggleClassActive(e){
    e.target.classList.toggle("active");
+   selectedCards();
  }
-
-
 	return (
 		<div onClick={toggleClassActive} className="card " data-id={card.id}>  
     <h2 className="card-title">{card.name}</h2>
@@ -31,5 +32,5 @@ const Card = ({card}) => {
   </div>
 	)
 }
-
 export default Card;
+

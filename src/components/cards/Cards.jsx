@@ -16,7 +16,6 @@ useEffect(()=> {
 
  setData(sortArr)
 },[filters]);
-
 	return (
 		<div className='cards'>
 			{data.map(card =>
@@ -25,5 +24,4 @@ useEffect(()=> {
 		</div>
 	)
 }
-
 export default Cards;
