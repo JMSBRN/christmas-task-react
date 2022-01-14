@@ -10,12 +10,6 @@
 	margin-bottom: 35px;
 }
 
-.year-slider-container, .count-slider-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
 input[type="range"] {
   margin: 10px;
 }
@@ -32,15 +26,13 @@ output {
   border: 1px solid #278D9F;
 }
 
-.count-slider,
-.year-slider {
+.slider {
   display: inline-block; 
   height: 6px;
   width: 270px;
 }
 
-.year-slider-container,
-.count-slider-container {
+.slider-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
