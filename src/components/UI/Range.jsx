@@ -1,16 +1,27 @@
-import React from 'react'
+import React,{useState} from 'react'
+import Slider from '@mui/material/Slider';
+import Box from '@mui/material/Box';
 
-const Range = (props) => {
-const getValue = (e) => {
-console.log(e.target.value);
-}
+
+
+const Range = () => {
+
+	const [value, setValue] = useState([20, 37]);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
 	return (
-		<div className='slider-container'>
-			<output className="slider-output">{props.min}</output>
-			    <input onChange={getValue} className='slider' type="range" min={props.min} max={props.max} ></input>
-			<output className="slider-output">{props.max}</output>		
-		</div>
+		<Box className='box' sx={{ width: 170 }}>
+      <Slider className="slider"
+        getAriaLabel={() => 'Temperature range'}
+        value={value}
+        onChange={handleChange}
+        valueLabelDisplay="auto"
+      />
+    </Box>
 	)
 }
-export default Range
+export default Range;
 
