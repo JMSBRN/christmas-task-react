@@ -1,33 +1,25 @@
 
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
+import { ContextFilters } from '../ContextFilters'
 
 const Ranges = () => {
 
-	const [value, setValue] = useState([3, 6])
-	const [value2, setValue2] = useState([1960, 1980])
+	const {handleChangeCount, valueCount, handleChangeYear, valueYear} = useContext(ContextFilters)
 
- function handleChangeCount(event, newValue) {
-	setValue(newValue);
-
- }
- function handleChangeYear(event, newValue) {
-	setValue2(newValue);
-
- }
 	return (
 		<div className="range">
 			<div className="controls-title">Фильтры по диапазону</div>
 			<div>Количество экземпляров:</div>
 			<div className="count-slider-container">
-				<output className='slider-output'>{value[0]}</output>
+				<output className='slider-output'>{valueCount[0]}</output>
 				<Box className='box' sx={{ width: 500 }}>
             <Slider
               sx={ {color: '#287471'}}
               className="slider"
               getAriaLabel={() => 'Temperature range'}
-              value={value}
+              value={valueCount}
 							min={1}
 							max={12}
 							step={1}
@@ -35,17 +27,17 @@ const Ranges = () => {
               valueLabelDisplay="off"
             />
       </Box>
-				<output className='slider-output'>{value[1]}</output>
+				<output className='slider-output'>{valueCount[1]}</output>
 			</div>
 			<div>Год приобретения:</div>
 			<div className="year-slider-container">
-				<output className='slider-output'>{value2[0]}</output>
+				<output className='slider-output'>{valueYear[0]}</output>
 				<Box className='box' sx={{ width: 500 }}>
             <Slider
               sx={ {color: '#287471'}}
               className="slider"
               getAriaLabel={() => 'Temperature range'}
-              value={value2}
+              value={valueYear}
 							min={1940}
 							max={2020}
 							step={10}
@@ -53,7 +45,7 @@ const Ranges = () => {
               valueLabelDisplay="off"
             />
       </Box>
-				<output className='slider-output'>{value2[1]}</output>
+				<output className='slider-output'>{valueYear[1]}</output>
 			</div>
 		</div>
 	)

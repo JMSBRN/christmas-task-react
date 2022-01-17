@@ -8,6 +8,8 @@ import {ContextFilters} from './components/ContextFilters'
 function App() {
   const [filters, setFilters] = useState({shape: [], color: [], size:[], favorite: []})
   const [selected, setSelected] = useState(0)
+  const [valueCount, setValueCount] = useState([1, 12])
+  const [valueYear, setValueYear] = useState([1940, 2020])
 	const shapeFromFilters = (filters) => {
 		setFilters(filters)	
 	}
@@ -29,9 +31,17 @@ function App() {
 		const selected = document.querySelectorAll('.active');
 		setSelected(selected.length);
 	}
+  const  handleChangeCount =(event, newValue)=> {
+    setValueCount(newValue);
+   }
+
+   function handleChangeYear(event, newValue) {
+    setValueYear(newValue);
+   }
+
   return (
     <div className="App">
-      <ContextFilters.Provider value={{...filters, choiceFromButton, selectedCards, selected}}>
+      <ContextFilters.Provider value={{...filters, choiceFromButton, selectedCards, selected, handleChangeCount, valueCount, handleChangeYear, valueYear }}>
         <Header/>
         <Main/>
         <Footer/>
