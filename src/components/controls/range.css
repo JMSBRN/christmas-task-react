@@ -47,18 +47,5 @@ output {
   display: flex;
   align-items: center;
  
-}
-
-.css-187mznn-MuiSlider-root {
-  border-radius: 12px;
-  box-sizing: content-box;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  touch-action: none;
-  color: #232629;
-  -webkit-tap-highlight-color: transparent;
-  height: 4px;
-  width: 100%;
-  padding: 13px 0;
+ 
 }
