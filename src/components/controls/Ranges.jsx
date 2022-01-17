@@ -28,6 +28,9 @@ const Ranges = () => {
               className="slider"
               getAriaLabel={() => 'Temperature range'}
               value={value}
+							min={1}
+							max={12}
+							step={1}
               onChange={handleChangeCount}
               valueLabelDisplay="off"
             />
@@ -43,6 +46,9 @@ const Ranges = () => {
               className="slider"
               getAriaLabel={() => 'Temperature range'}
               value={value2}
+							min={1940}
+							max={2020}
+							step={10}
               onChange={handleChangeYear}
               valueLabelDisplay="off"
             />

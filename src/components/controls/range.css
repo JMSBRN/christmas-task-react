@@ -1,5 +1,4 @@
 .range {
-
 	width: 480px;
 	padding: 10px 20px;
 	border-radius: 10px;
@@ -46,6 +45,16 @@ output {
 .box {
   display: flex;
   align-items: center;
- 
- 
+}
+
+.MuiSlider-track{
+  color: aliceblue;
+}
+
+.MuiSlider-thumb {
+  color: rgb(218, 223, 226);
+}
+
+.Mui-active {
+  color: #e94f4f;
 }
