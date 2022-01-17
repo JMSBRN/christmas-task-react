@@ -12,12 +12,11 @@ useEffect(()=> {
 		(filters.color.includes(el.color) || filters.color.length === 0) &&
 		(filters.size.includes(el.size) || filters.size.length === 0 ) &&
 		(filters.favorite.includes(el.favorite) || filters.favorite.length === 0 ) &&
-		(filters.valueCount.includes(parseInt(el.count)) || filters.valueCount.length === 0 ) &&
-		(filters.valueYear.includes(parseInt(el.year)) || filters.valueYear.length === 0 ) 
+		(filters.valueCount[1] >= (parseInt(el.count))  && filters.valueCount[0] <= (parseInt(el.count))) &&
+		(filters.valueYear[1] >= (parseInt(el.year))  && filters.valueYear[0] <= (parseInt(el.year))) 
 	))
 
  setData(filteredtArr)
-
 },[filters]);
 	return (
 		<div className='cards'>
