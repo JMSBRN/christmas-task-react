@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/christmas-task-react/static/css/main.366b107c.css",
-    "main.js": "/christmas-task-react/static/js/main.5cf859de.js",
+    "main.js": "/christmas-task-react/static/js/main.42cad74a.js",
     "static/media/bg1.jpg": "/christmas-task-react/static/media/bg1.65a1ad87f9bc2daf6407.jpg",
     "static/media/36.png": "/christmas-task-react/static/media/36.75268fc89ba6c203d871.png",
     "static/media/40.png": "/christmas-task-react/static/media/40.1642fd97e62bc67e248b.png",
@@ -75,10 +75,10 @@
     "static/media/ball.svg": "/christmas-task-react/static/media/ball.02ba2b1b2ea99d65f6d4.svg",
     "index.html": "/christmas-task-react/index.html",
     "main.366b107c.css.map": "/christmas-task-react/static/css/main.366b107c.css.map",
-    "main.5cf859de.js.map": "/christmas-task-react/static/js/main.5cf859de.js.map"
+    "main.42cad74a.js.map": "/christmas-task-react/static/js/main.42cad74a.js.map"
   },
   "entrypoints": [
     "static/css/main.366b107c.css",
-    "static/js/main.5cf859de.js"
+    "static/js/main.42cad74a.js"
   ]
 }
