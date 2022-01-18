@@ -1,14 +1,13 @@
 import React from 'react'
 
-const SelectSort = (props) => {
+const SelectSort = ({options,value,defaultOption,onChange}) => {
 	return (
-		<select className="sort-select">
-			<option defaultValue="sort-name-max">{props.selectedOption}</option>
-			<option value="sort-name-min">{props.optionOne}</option>
-			<option value="sort-count-max">{props.optionTwo}</option>
-			<option value="sort-count-min">{props.optionThree}</option>
-	</select>
+		<select className="sort-select" value={value} onChange={e => onChange(e.target.value)}	>
+			<option >{defaultOption}</option>
+			{options.map(option => 
+				<option key={option.value} value={option.value}>{option.name}</option>
+			)}
+		</select>
 	)
 }
-
 export default SelectSort
