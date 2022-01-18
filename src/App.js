@@ -11,6 +11,7 @@ function App() {
   const [valueCount, setValueCount] = useState([1, 12])
   const [valueYear, setValueYear] = useState([1940, 2020])
   const [selectedSort, setSelectedSort] = useState('')
+  const [searchQuery, setSearchQuery] = useState('')
   const shapeFromFilters = (filters) => {
     setFilters(filters)
   }
@@ -41,6 +42,10 @@ function App() {
   function sortbySelect(selectedSort) {
     setSelectedSort(selectedSort)
   }
+  function handleSearchInput(e) {
+    setSearchQuery(e.target.value)
+  }
+
   return (
     <div className="App">
       <ContextFilters.Provider
@@ -54,7 +59,9 @@ function App() {
           handleChangeYear,
           valueYear,
           sortbySelect,
-          selectedSort
+          selectedSort,
+          handleSearchInput,
+          searchQuery
         }}>
         <Header />
         <Main />

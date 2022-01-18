@@ -13,7 +13,8 @@ useEffect(()=> {
 		(filters.size.includes(el.size) || filters.size.length === 0 ) &&
 		(filters.favorite.includes(el.favorite) || filters.favorite.length === 0 ) &&
 		(filters.valueCount[1] >= (parseInt(el.count))  && filters.valueCount[0] <= (parseInt(el.count))) &&
-		(filters.valueYear[1] >= (parseInt(el.year))  && filters.valueYear[0] <= (parseInt(el.year)))
+		(filters.valueYear[1] >= (parseInt(el.year))  && filters.valueYear[0] <= (parseInt(el.year))) &&
+		((el.name.toLowerCase()).includes(filters.searchQuery.toLowerCase()))
 	))
 
 	function sortArrByConditions(arr,func){
