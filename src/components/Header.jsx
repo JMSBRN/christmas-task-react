@@ -16,7 +16,7 @@ const Header = () => {
 				<a href='/#'>Toys</a>
 				<a href='/#'>Tree</a>
 			</nav>
-			<input onChange={handleSearchInput} autoComplete='off' type="search" className="header-search"/>
+			<input className="header-search" onChange={handleSearchInput} autoComplete='off' type="search" />
 		  <SelectHeader />
 		</header>
 	)
