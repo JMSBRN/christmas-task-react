@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
 import './css/App.css';
 import { ContextFilters } from './components/ContextFilters'
+import Tree from './components/Tree';
+import Home from './components/Home';
 
 function App() {
   const [filters, setFilters] = useState({ shape: [], color: [], size: [], favorite: [] })
@@ -47,27 +50,33 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <ContextFilters.Provider
-        value={{
-          ...filters,
-          choiceFromButton,
-          selectedCards,
-          selected,
-          handleChangeCount,
-          valueCount,
-          handleChangeYear,
-          valueYear,
-          sortbySelect,
-          selectedSort,
-          handleSearchInput,
-          searchQuery
-        }}>
-        <Header />
-        <Main />
-        <Footer />
-      </ContextFilters.Provider>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <ContextFilters.Provider
+          value={{
+            ...filters,
+            choiceFromButton,
+            selectedCards,
+            selected,
+            handleChangeCount,
+            valueCount,
+            handleChangeYear,
+            valueYear,
+            sortbySelect,
+            selectedSort,
+            handleSearchInput,
+            searchQuery
+          }}>
+          <Header />
+            <Routes>
+                 <Route path="/"     element={<Home/>}/>
+                 <Route path="/toys" element={<Main/>}/>
+                 <Route path="/tree" element={<Tree/>}/>
+            </Routes>
+          <Footer />
+        </ContextFilters.Provider>
+      </div>
+    </BrowserRouter>
   );
 }
 export default App;
