@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/christmas-task-react/static/css/main.1a4e03d3.css",
-    "main.js": "/christmas-task-react/static/js/main.c607c34a.js",
+    "main.css": "/christmas-task-react/static/css/main.940ce702.css",
+    "main.js": "/christmas-task-react/static/js/main.fd4bae08.js",
     "static/media/bg1.jpg": "/christmas-task-react/static/media/bg1.65a1ad87f9bc2daf6407.jpg",
+    "static/media/1.png": "/christmas-task-react/static/media/1.53f0fb0d6d6e27697cb5.png",
+    "static/media/2.png": "/christmas-task-react/static/media/2.ec38ff0677b8ed92fe82.png",
     "static/media/36.png": "/christmas-task-react/static/media/36.75268fc89ba6c203d871.png",
     "static/media/40.png": "/christmas-task-react/static/media/40.1642fd97e62bc67e248b.png",
     "static/media/32.png": "/christmas-task-react/static/media/32.ac68e2619ccce04157f2.png",
@@ -39,14 +41,12 @@
     "static/media/21.png": "/christmas-task-react/static/media/21.68a1f2f38f3aa20cba74.png",
     "static/media/13.png": "/christmas-task-react/static/media/13.bb3cebf509f997842112.png",
     "static/media/57.png": "/christmas-task-react/static/media/57.cbabfd95dab16d0c2fe6.png",
-    "static/media/1.png": "/christmas-task-react/static/media/1.53f0fb0d6d6e27697cb5.png",
     "static/media/55.png": "/christmas-task-react/static/media/55.625391d0b636c2456d1d.png",
     "static/media/6.png": "/christmas-task-react/static/media/6.f0fc62cb40cf43804f76.png",
     "static/media/12.png": "/christmas-task-react/static/media/12.a033697fce625e386fa5.png",
     "static/media/47.png": "/christmas-task-react/static/media/47.4f16a567917d7a0fe6dd.png",
     "static/media/15.png": "/christmas-task-react/static/media/15.6fabb19aa4f0e4c402b0.png",
     "static/media/27.png": "/christmas-task-react/static/media/27.e943dfdb2d40d90288cf.png",
-    "static/media/2.png": "/christmas-task-react/static/media/2.ec38ff0677b8ed92fe82.png",
     "static/media/54.png": "/christmas-task-react/static/media/54.43d225551685ae0889a2.png",
     "static/media/44.png": "/christmas-task-react/static/media/44.4bf9184bccc0066ca306.png",
     "static/media/17.png": "/christmas-task-react/static/media/17.2490b12c8c93ca5b3059.png",
@@ -73,12 +73,13 @@
     "static/media/arrow-down.svg": "/christmas-task-react/static/media/arrow-down.19d5097eb66e9b879fe7.svg",
     "static/media/bell.svg": "/christmas-task-react/static/media/bell.bb18e4cea62da25074aa.svg",
     "static/media/ball.svg": "/christmas-task-react/static/media/ball.02ba2b1b2ea99d65f6d4.svg",
+    "static/media/search.svg": "/christmas-task-react/static/media/search.0e6e0283ae532bc3161e.svg",
     "index.html": "/christmas-task-react/index.html",
-    "main.1a4e03d3.css.map": "/christmas-task-react/static/css/main.1a4e03d3.css.map",
-    "main.c607c34a.js.map": "/christmas-task-react/static/js/main.c607c34a.js.map"
+    "main.940ce702.css.map": "/christmas-task-react/static/css/main.940ce702.css.map",
+    "main.fd4bae08.js.map": "/christmas-task-react/static/js/main.fd4bae08.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a4e03d3.css",
-    "static/js/main.c607c34a.js"
+    "static/css/main.940ce702.css",
+    "static/js/main.fd4bae08.js"
   ]
 }
