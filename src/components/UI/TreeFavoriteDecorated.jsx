@@ -10,5 +10,4 @@ const TreeFavoriteDecorated = () => {
 	</div>
 	)
 }
-
 export default TreeFavoriteDecorated

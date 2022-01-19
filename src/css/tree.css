@@ -182,21 +182,24 @@
 }
 
 .snow-control {
-  width: 40px;
-  height: 40px;
-  background-image: url("../components/assets/icons/snow.png");
+  width: 80px;
+  height: 80px;
+  border: none;
+  margin-top: 8px;
+  background-color: transparent;
+  color: transparent;
 }
-
 .audio-control {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   margin-right: 40px;
-  background-image: url("../components/assets/icons/audio.png");
+  border: none;
+  background-color: transparent;
+  color: transparent;
 }
-
-.snow-control.active,
-.audio-control.active {
-  filter: saturate(1.5) brightness(.8);  
+.sound-img.active,
+.show-img.active {
+    filter: invert(9%) sepia(63%) saturate(461%) hue-rotate(322deg) brightness(83%) contrast(88%); 
 }
 
 .bg {
