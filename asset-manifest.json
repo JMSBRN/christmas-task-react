@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/christmas-task-react/static/css/main.940ce702.css",
-    "main.js": "/christmas-task-react/static/js/main.fd4bae08.js",
+    "main.js": "/christmas-task-react/static/js/main.61d22f15.js",
     "static/media/bg1.jpg": "/christmas-task-react/static/media/bg1.65a1ad87f9bc2daf6407.jpg",
     "static/media/1.png": "/christmas-task-react/static/media/1.53f0fb0d6d6e27697cb5.png",
     "static/media/2.png": "/christmas-task-react/static/media/2.ec38ff0677b8ed92fe82.png",
@@ -76,10 +76,10 @@
     "static/media/search.svg": "/christmas-task-react/static/media/search.0e6e0283ae532bc3161e.svg",
     "index.html": "/christmas-task-react/index.html",
     "main.940ce702.css.map": "/christmas-task-react/static/css/main.940ce702.css.map",
-    "main.fd4bae08.js.map": "/christmas-task-react/static/js/main.fd4bae08.js.map"
+    "main.61d22f15.js.map": "/christmas-task-react/static/js/main.61d22f15.js.map"
   },
   "entrypoints": [
     "static/css/main.940ce702.css",
-    "static/js/main.fd4bae08.js"
+    "static/js/main.61d22f15.js"
   ]
 }
