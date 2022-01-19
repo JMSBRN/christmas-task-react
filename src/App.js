@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -50,7 +50,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <Router >
       <div className="App">
         <ContextFilters.Provider
           value={{
@@ -67,16 +67,17 @@ function App() {
             handleSearchInput,
             searchQuery
           }}>
-          <Header />
+            <Header/>
             <Routes>
-                 <Route path="/"     element={<Home/>}/>
-                 <Route path="/toys" element={<Main/>}/>
-                 <Route path="/tree" element={<Tree/>}/>
+              <Route path="*" element={<Home/>}/>
+              <Route path="/home" element={<Home/>}/>
+              <Route path="/toys" element={<Main/>}/>
+              <Route path="/tree" element={<Tree/>}/>
             </Routes>
-          <Footer />
+            <Footer/>
         </ContextFilters.Provider>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 export default App;

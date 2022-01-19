@@ -9,7 +9,7 @@ const Header = () => {
 	return (
 		<header className="header">
 			<nav className="nav-bar">
-				<Link to="/">
+				<Link to="/home">
 					<img className='header-logo-tree' src={logoTree} alt="logo-tree"/>
 				</Link>
 				<Link to="/toys">Игрушки</Link>
