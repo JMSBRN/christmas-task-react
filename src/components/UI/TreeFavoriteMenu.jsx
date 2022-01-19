@@ -6,7 +6,7 @@ import ShowAndAudio from '../UI/ShowAndAudio'
 
 const TreeFavoriteMenu = () => {
 	return (
-		<div class="favorites-menu">
+		<div className="favorites-menu">
 		<ShowAndAudio/>
 		<Trees/>
 		<BgTrees/>

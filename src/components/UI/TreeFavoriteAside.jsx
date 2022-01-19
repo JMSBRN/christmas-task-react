@@ -4,7 +4,7 @@ import TreeFavoriteDecorated from './TreeFavoriteDecorated'
 
 const TreeFavoriteAside = () => {
 	return (
-		<div class="favorites-aside">
+		<div className="favorites-aside">
 	   <TreeFavoriteAsideToys/>
      <TreeFavoriteDecorated/>
 	</div>

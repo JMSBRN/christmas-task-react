@@ -2,7 +2,7 @@ import React from 'react'
 
 const Trees = () => {
 	return (
-		<div class="tree-container menu-container"></div>
+		<div className="tree-container menu-container"></div>
 	)
 }
 

@@ -2,9 +2,9 @@ import React from 'react'
 
 const TreeFavoriteDecorated = () => {
 	return (
-		<div class="favorites-decorate">
-		<div class="favorites-decorate-container">
-			<div class="tree-decorate">
+		<div className="favorites-decorate">
+		<div className="favorites-decorate-container">
+			<div className="tree-decorate">
 			</div>
 		</div>
 	</div>

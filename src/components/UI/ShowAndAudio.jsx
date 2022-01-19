@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import url from '../assets/audio/audio.mp3'
 import IsonSoundImg from '../assets/icons/audio.png'
 import IsonSnowImg from '../assets/icons/snow.png'
+import { ContextFilters } from '../ContextFilters'
 
 const useAudio = (url) => {
   const [audio] = useState(new Audio(url));
@@ -25,13 +26,16 @@ const useAudio = (url) => {
 };
 
 
-
 const ShowAndAudio = () => {
+  const {toggleActiveCSnowFlakes} = useContext(ContextFilters);
   const [playing, toggle] = useAudio(url);
+  
+
 
   function toggleActiveClass(e) {
     e.target.classList.toggle("active");
   }
+
   return (
     <div>
       <div className="snow-audio-container menu-container">
@@ -39,8 +43,8 @@ const ShowAndAudio = () => {
           {playing ? "Pause" : "Play"}
           <img className='sound-img' onClick={toggleActiveClass} src={IsonSoundImg} width={50} alt='sound-img'></img>
         </button>
-        <button className="snow-control menu-item">
-          <img onClick={toggleActiveClass} className='show-img' src={IsonSnowImg} width={50} alt='snow-img'></img>
+        <button onClick={toggleActiveCSnowFlakes} className="snow-control menu-item">
+          <img  className='show-img' src={IsonSnowImg} width={50} alt='snow-img'></img>
         </button>
       </div>
     </div>

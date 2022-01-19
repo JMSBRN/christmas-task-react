@@ -4,9 +4,9 @@ import TreeFavoriteMenu from '../UI/TreeFavoriteMenu'
 import TreeMainPage from '../UI/TreeMainPage'
 const Tree = () => {
 	return (
-		<div class="page favorites-page" data-page="favoritesPage">
-			<div class="blur">
-				<div class="page-container">
+		<div className="page favorites-page" data-page="favoritesPage">
+			<div className="blur">
+				<div className="page-container">
           <TreeFavoriteMenu/>
           <TreeMainPage/>
           <TreeFavoriteAside/>

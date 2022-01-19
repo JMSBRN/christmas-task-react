@@ -15,6 +15,7 @@ function App() {
   const [valueYear, setValueYear] = useState([1940, 2020])
   const [selectedSort, setSelectedSort] = useState('')
   const [searchQuery, setSearchQuery] = useState('')
+  const [activeSnow, setActiveSnow] = useState('')
   const shapeFromFilters = (filters) => {
     setFilters(filters)
   }
@@ -48,7 +49,9 @@ function App() {
   function handleSearchInput(e) {
     setSearchQuery(e.target.value)
   }
-
+  function toggleActiveCSnowFlakes(e) {
+    setActiveSnow(e.target.classList.toggle("active"));
+  }
   return (
     <Router >
       <div className="App">
@@ -65,7 +68,9 @@ function App() {
             sortbySelect,
             selectedSort,
             handleSearchInput,
-            searchQuery
+            searchQuery,
+            toggleActiveCSnowFlakes,
+            activeSnow
           }}>
             <Header/>
             <Routes>
