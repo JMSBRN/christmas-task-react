@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Trees = () => {
+  
+  const [trees, setTrees] = useState([1,2,3,4,5,6]);
+
+  console.log(trees);
+
+
 	return (
-		<div class="tree-container menu-container">
-          <div class="tree menu-item" data-tree="1"></div>
-          <div class="tree menu-item" data-tree="2"></div>
-          <div class="tree menu-item" data-tree="3"></div>
-          <div class="tree menu-item" data-tree="4"></div>
-          <div class="tree menu-item" data-tree="5"></div>
-          <div class="tree menu-item" data-tree="6"></div>
+		<div className="tree-container menu-container">
+          {
+            trees.map(tree => {
+              <div key={tree.index} className="tree menu-item" data-tree="1"></div>
+            })
+          }
         </div>
 	)
 }

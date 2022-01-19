@@ -7,22 +7,22 @@ import img5 from '../assets/tree/5.png'
 
 const TreeFavoriteDecorated = () => {
   return (
-    <div class="favorites-decorate">
-      <div class="favorites-decorate-container">
-        <div class="tree-decorate">
-          <img src={img1} class="tree-decorate-img" alt="decorate-tree" />
+    <div className="favorites-decorate">
+      <div className="favorites-decorate-container">
+        <div className="tree-decorate">
+          <img src={img1} className="tree-decorate-img" alt="decorate-tree" />
         </div>
-        <div class="tree-decorate">
-          <img src={img2} class="tree-decorate-img" alt="decorate-tree" />
+        <div className="tree-decorate">
+          <img src={img2} className="tree-decorate-img" alt="decorate-tree" />
         </div>
-        <div class="tree-decorate">
-          <img src={img3} class="tree-decorate-img" alt="decorate-tree" />
+        <div className="tree-decorate">
+          <img src={img3} className="tree-decorate-img" alt="decorate-tree" />
         </div>
-        <div class="tree-decorate">
-          <img src={img4} class="tree-decorate-img" alt="decorate-tree" />
+        <div className="tree-decorate">
+          <img src={img4} className="tree-decorate-img" alt="decorate-tree" />
         </div>
-        <div class="tree-decorate">
-          <img src={img5} class="tree-decorate-img" alt="decorate-tree" />
+        <div className="tree-decorate">
+          <img src={img5} className="tree-decorate-img" alt="decorate-tree" />
         </div>
       </div>
     </div>

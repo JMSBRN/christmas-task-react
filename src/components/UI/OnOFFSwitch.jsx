@@ -2,11 +2,11 @@ import React from 'react';
 
 const OnOFFSwitch = () => {
   return (
-    <div class="onoffswitch">
-      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked=""/>
-        <label class="onoffswitch-label" for="myonoffswitch">
-          <div class="onoffswitch-inner"></div>
-          <div class="onoffswitch-switch"></div>
+    <div className="onoffswitch">
+      <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" checked=""/>
+        <label className="onoffswitch-label" for="myonoffswitch">
+          <div className="onoffswitch-inner"></div>
+          <div className="onoffswitch-switch"></div>
         </label>
     </div>
   )
