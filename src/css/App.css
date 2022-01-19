@@ -4,6 +4,8 @@
 @import '../components/cards/cards.css';
 @import './noUI.css';
 @import './main.css';
+@import '../css/home.css';
+@import '../css/tree.css';
 
 
 * {
