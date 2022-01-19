@@ -1,8 +1,8 @@
 import React from 'react'
-import Cards from './cards/Cards'
-import Controls from './controls/Controls'
+import Cards from '../cards/Cards'
+import Controls from '../controls/Controls'
 
-const Main = () => {
+const Toys = () => {
 	return (
 		<div className='main'>
 		  <div className="blur">
@@ -12,4 +12,4 @@ const Main = () => {
 		</div>
 	)
 }
-export default Main;
+export default Toys;

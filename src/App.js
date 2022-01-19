@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Main from './components/Main';
+import Toys from './components/pages/Toys';
 import './css/App.css';
 import { ContextFilters } from './components/ContextFilters'
-import Tree from './components/Tree';
-import Home from './components/Home';
+import Tree from './components/pages/Tree';
+import Home from './components/pages/Home';
 
 function App() {
   const [filters, setFilters] = useState({ shape: [], color: [], size: [], favorite: [] })
@@ -71,7 +71,7 @@ function App() {
             <Routes>
               <Route path="*" element={<Home/>}/>
               <Route path="/home" element={<Home/>}/>
-              <Route path="/toys" element={<Main/>}/>
+              <Route path="/toys" element={<Toys/>}/>
               <Route path="/tree" element={<Tree/>}/>
             </Routes>
             <Footer/>
