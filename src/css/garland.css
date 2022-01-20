@@ -6,6 +6,7 @@
   position: absolute;
   top: 20px;
   left: 50%;
+  margin-top: 930px;
   margin-left: -400px;
   pointer-events: none;
   z-index: 90;
