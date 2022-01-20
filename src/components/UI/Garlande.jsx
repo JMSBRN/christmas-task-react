@@ -1,34 +1,26 @@
 import React, { useState } from 'react';
 
 const Garlande = () => {
-
-	const [lights, setLights] = useState([
-		[
-			{ rotate: "65", translate: "60" },
-			{ rotate: "77", translate: "60" },
-			{ rotate: "89", translate: "60" },
-			{ rotate: "101", translate: "60" },
-			{ rotate: "113", translate: "60" },
-		]
-
+	const [lights] = useState([
+			{ id:"1",rotate: "65", translate: "60" },
+			{ id:"2",rotate: "77", translate: "60" },
+			{ id:"3",rotate: "89", translate: "60" },
+			{ id:"4",rotate: "101", translate: "60" },
+			{ id:"5",rotate: "113", translate: "60" }
 	]);
 
-
 	return (
-		<div style={{ color: "black" }} class="garland-tree-container ">
-			<ul class="lightrope" style={{ color: "black", width: "120px; height: 120px" }}>
-				{
-					lights.map(arr =>
-						arr.map(light =>
-							<li class="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>
-						)
+		<div className="garland-tree-container ">
+			<ul className="lightrope" style={{ width: "120px", height: "320px" }}>
+				{		  
+					lights.map(light =>
+						<li key={light.id} className="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>
 					)
 				}
 			</ul>
 		</div>
 	)
 }
-
 export default Garlande;
 
 
