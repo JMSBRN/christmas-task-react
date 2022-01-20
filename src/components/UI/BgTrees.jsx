@@ -1,14 +1,29 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import { ContextFilters } from '../ContextFilters';
 
 const BgTrees = () => {
 
-  const [bgs, setBgs] = useState([1,2,3,4,5,6,7,8,9,10]);
+  const {getbgMainTrees} = useContext(ContextFilters);
+
+  const [bgs] = useState([
+    
+    {id:"1"},
+    {id:"2"},
+    {id:"3"},
+    {id:"4"},
+    {id:"5"},
+    {id:"6"},
+    {id:"7"},
+    {id:"8"},
+    {id:"9"},
+    {id:"10"},
+  ]);
 
 	return (
 		<div className="bg-container menu-container">
           {
            bgs.map(bg => 
-            <div key={bg}className="bg menu-item" data-bg="1"></div>
+            <div onClick={getbgMainTrees} key={bg.id}className="bg menu-item" data-bg={bg.id}></div>
             )
           }
     </div>

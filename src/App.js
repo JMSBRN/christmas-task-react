@@ -16,7 +16,8 @@ function App() {
   const [selectedSort, setSelectedSort] = useState('')
   const [searchQuery, setSearchQuery] = useState('')
   const [activeSnow, setActiveSnow] = useState('')
-  const [FavoriteTrees, setFavoriteTrees] = useState(1);
+  const [favoriteTrees, setFavoriteTrees] = useState(1);
+  const [bgMainTrees, setBgMainTrees] = useState(1);
   const shapeFromFilters = (filters) => {
     setFilters(filters)
   }
@@ -56,6 +57,9 @@ function App() {
   function getFavoriteTree(e){
     setFavoriteTrees(e.target.dataset.tree)
   }
+  function getbgMainTrees (e){
+    setBgMainTrees(e.target.dataset.bg)
+  }
   return (
     <Router >
       <div className="App">
@@ -76,7 +80,9 @@ function App() {
             toggleActiveCSnowFlakes,
             activeSnow,
             getFavoriteTree,
-            FavoriteTrees
+            favoriteTrees,
+            getbgMainTrees,
+            bgMainTrees
           }}>
             <Header/>
             <Routes>
