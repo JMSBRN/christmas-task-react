@@ -18,7 +18,7 @@ const TreeFavoriteAsideToys = () => {
 		<div className="favorites-container">
 			{
 				favoriteToys.map(favoriteToy =>
-					<div className="favorites-card" data-num={favoriteToy.date}>
+					<div key={favoriteToy.id} className="favorites-card" data-num={favoriteToy.date}>
 					<p className="favorites-count">{favoriteToy.count}</p>
 					<img className="favorites-card-img" src="assets/toys/1.png" alt="toy" id={favoriteToy.id} draggable="true" data-imgnum={favoriteToy.date} />
 				</div>

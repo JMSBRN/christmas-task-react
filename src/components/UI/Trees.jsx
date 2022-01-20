@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { ContextFilters } from '../ContextFilters';
 
 const Trees = () => {
-  
-  const [trees, setTrees] = useState([1,2,3,4,5,6]);
-
+const {getFavoriteTree} = useContext(ContextFilters);
+function getTarget(e) {
+  getFavoriteTree(e);
+}
 	return (
-  <div className="tree-container menu-container">
-      {
-        trees.map(tree => 
-          <div  key={tree} className="tree menu-item" data-tree="1"></div>
-        )
-      }
-      </div>
+  <div className="tree-container menu-container">   
+    <div onClick={getTarget}  className="tree menu-item" data-tree="1"></div>
+    <div onClick={getTarget}  className="tree menu-item" data-tree="2"></div>
+    <div onClick={getTarget}  className="tree menu-item" data-tree="3"></div>
+    <div onClick={getTarget}  className="tree menu-item" data-tree="4"></div>
+    <div onClick={getTarget}  className="tree menu-item" data-tree="5"></div>
+    <div onClick={getTarget}  className="tree menu-item" data-tree="6"></div>
+  </div>
 	)
 }
 

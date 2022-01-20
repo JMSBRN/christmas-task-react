@@ -18,7 +18,7 @@ const TreeFavoriteDecorated = () => {
       <div className="favorites-decorate-container">
         {
           decorTrees.map(decorTree =>
-            <div className="tree-decorate">
+            <div key={decorTree.src} className="tree-decorate">
               <img src={decorTree.src} className="tree-decorate-img" alt="decorate-tree" />
             </div>
           )
