@@ -1,23 +1,25 @@
-import React from 'react'
+import React,{useState} from 'react'
 import OnOFFSwitch from './OnOFFSwitch'
 
 const GarlandeTree = () => {
+  const [btns, setBtns] = useState([
+    {class: "multicolor-btn", data:"multicolor"},
+    {class: "red-btn", data:"red"},
+    {class: "blue-btn", data:"blue"},
+    {class: "yellow-btn", data:"yelow"},
+    {class: "green-btn", data:"green"}
+]);
   return (
     <div className="garland-container menu-container">
       <div className="garland-btns">
-        <button className="color-btn multicolor-btn" data-color="multicolor"></button>
-        <button className="color-btn red-btn" data-color="red"></button>
-        <button className="color-btn blue-btn" data-color="blue"></button>
-        <button className="color-btn yellow-btn" data-color="yellow"></button>
-        <button className="color-btn green-btn" data-color="green"></button>
+       
+          {
+            btns.map(btn=> 
+              <button key={btn.data} className={`color-btn ${btn.class}`} data-color={btn.data}></button>
+              )
+          }
       </div>
-      <div className="onoffswitch">
-        <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" defaultChecked="" />
-        <label className="onoffswitch-label" htmlFor="myonoffswitch">
-          <div className="onoffswitch-inner"></div>
-          <div className="onoffswitch-switch"></div>
-        </label>
-      </div>
+      <OnOFFSwitch/>
     </div>
   )
 }

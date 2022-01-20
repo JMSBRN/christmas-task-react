@@ -1,19 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const BgTrees = () => {
+
+  const [bgs, setBgs] = useState([1,2,3,4,5,6,7,8,9,10]);
+
 	return (
 		<div className="bg-container menu-container">
-          <div className="bg menu-item" data-bg="1"></div>
-          <div className="bg menu-item" data-bg="2"></div>
-          <div className="bg menu-item" data-bg="3"></div>
-          <div className="bg menu-item" data-bg="4"></div>
-          <div className="bg menu-item" data-bg="5"></div>
-          <div className="bg menu-item" data-bg="6"></div>
-          <div className="bg menu-item" data-bg="7"></div>
-          <div className="bg menu-item" data-bg="8"></div>
-          <div className="bg menu-item" data-bg="9"></div>
-          <div className="bg menu-item" data-bg="10"></div>
-        </div>
+          {
+           bgs.map(bg => 
+            <div key={bg}className="bg menu-item" data-bg="1"></div>
+            )
+          }
+    </div>
 	)
 }
 
