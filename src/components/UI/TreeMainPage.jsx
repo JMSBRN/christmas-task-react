@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { ContextFilters } from '../ContextFilters';
 import images from '../assets/tree/1.png'
 import bgs from '../assets/bg/1.jpg'
+import Garlande from './Garlande';
 
 const TreeMainPage = () => {
 	const { activeSnow, favoriteTrees, bgMainTrees } = useContext(ContextFilters);
@@ -18,7 +19,7 @@ const TreeMainPage = () => {
 		<div className={`snowflakes ${toggleSnow(activeSnow)}`}>
 			<div className="snowflakes"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 		</div>
-		<div className="garland-tree-container"></div>
+		<Garlande/>
       <img src={images} className="main-tree" useMap="#tree-map" alt="tree"/>
 	</div>
 	)

@@ -1,6 +1,6 @@
 import React from 'react'
 import BgTrees from '../UI/BgTrees'
-import GarlandeTree from '../UI/GarlandeTree'
+import TreeGarlande from '../UI/TreeGarlande'
 import Trees from '../UI/Trees'
 import ShowAndAudio from '../UI/ShowAndAudio'
 
@@ -10,7 +10,7 @@ const TreeFavoriteMenu = () => {
 		<ShowAndAudio/>
 		<Trees/>
 		<BgTrees/>
-		<GarlandeTree/>   
+		<TreeGarlande/>   
 	</div>
 	)
 }
