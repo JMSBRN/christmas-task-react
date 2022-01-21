@@ -7,7 +7,7 @@ const GarlandeButtons = () => {
     {class: "multicolor-btn", data:"multicolor"},
     {class: "red-btn", data:"red"},
     {class: "blue-btn", data:"blue"},
-    {class: "yellow-btn", data:"yelow"},
+    {class: "yellow-btn", data:"yellow"},
     {class: "green-btn", data:"green"}
 ]);
 const {getGerlandeButtonColor} = useContext(ContextFilters);
