@@ -18,6 +18,7 @@ function App() {
   const [activeSnow, setActiveSnow] = useState('')
   const [favoriteTrees, setFavoriteTrees] = useState(1);
   const [bgMainTrees, setBgMainTrees] = useState(1);
+  const [garlandeCheck, setGarlandeCheck] = useState(false);
   const shapeFromFilters = (filters) => {
     setFilters(filters)
   }
@@ -60,6 +61,9 @@ function App() {
   function getbgMainTrees (e){
     setBgMainTrees(e.target.dataset.bg)
   }
+  function getGarlandeCheck(e) {
+    setGarlandeCheck(e.target.checked);
+  }
   return (
     <Router >
       <div className="App">
@@ -82,7 +86,9 @@ function App() {
             getFavoriteTree,
             favoriteTrees,
             getbgMainTrees,
-            bgMainTrees
+            bgMainTrees,
+            getGarlandeCheck,
+            garlandeCheck
           }}>
             <Header/>
             <Routes>

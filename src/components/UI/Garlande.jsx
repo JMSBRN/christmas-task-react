@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ContextFilters } from '../ContextFilters';
 
 const Garlande = () => {
 	const [lights] = useState([
@@ -135,8 +136,18 @@ const Garlande = () => {
 		],
 	]);
 
+	const {garlandeCheck} = useContext(ContextFilters);
+ 
+	function hideGarlande(e) {
+		 if(e){
+			 return " ";
+		 }else{
+			return "active";
+		 }
+	}
+
 	return (
-		<div className="garland-tree-container ">
+		<div  className={`garland-tree-container ${hideGarlande(garlandeCheck)} `}>
 			<ul className="lightrope" style={{ width: "120px", height: "120px" }}>
 				{lights[0].map(light =>
 					<li key={light.id} className="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}

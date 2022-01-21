@@ -13,6 +13,10 @@
   overflow: hidden;
 }
 
+.garland-tree-container.active{
+  display: none;
+}
+
 .lightrope {
   white-space: nowrap;
   overflow: hidden;

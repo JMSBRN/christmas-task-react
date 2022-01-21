@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import OnOFFSwitch from './OnOFFSwitch'
 
-const GarlandeTree = () => {
+const GarlandeButtons = () => {
   const [btns, setBtns] = useState([
     {class: "multicolor-btn", data:"multicolor"},
     {class: "red-btn", data:"red"},
@@ -12,16 +12,11 @@ const GarlandeTree = () => {
   return (
     <div className="garland-container menu-container">
       <div className="garland-btns">
-       
-          {
-            btns.map(btn=> 
-              <button key={btn.data} className={`color-btn ${btn.class}`} data-color={btn.data}></button>
-              )
-          }
+          {btns.map(btn=> <button key={btn.data} className={`color-btn ${btn.class}`} data-color={btn.data}></button>)}
       </div>
       <OnOFFSwitch/>
     </div>
   )
 }
+export default GarlandeButtons
 
-export default GarlandeTree
