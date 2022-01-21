@@ -41,6 +41,7 @@ function App() {
   function selectedCards() {
     const selected = document.querySelectorAll('.active');
     setSelected(selected.length);
+    
   }
   const handleChangeCount = (event, newValue) => {
     setValueCount(newValue);
