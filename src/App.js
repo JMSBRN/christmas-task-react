@@ -19,6 +19,8 @@ function App() {
   const [favoriteTrees, setFavoriteTrees] = useState(1);
   const [bgMainTrees, setBgMainTrees] = useState(1);
   const [garlandeCheck, setGarlandeCheck] = useState(false);
+  const [gerlandeButtonColor, setGerlandeButtonColor] = useState('multicolor');
+
   const shapeFromFilters = (filters) => {
     setFilters(filters)
   }
@@ -64,6 +66,9 @@ function App() {
   function getGarlandeCheck(e) {
     setGarlandeCheck(e.target.checked);
   }
+  function getGerlandeButtonColor(e) {
+    setGerlandeButtonColor(e.target.dataset.color);
+  }
   return (
     <Router >
       <div className="App">
@@ -88,7 +93,9 @@ function App() {
             getbgMainTrees,
             bgMainTrees,
             getGarlandeCheck,
-            garlandeCheck
+            garlandeCheck,
+            getGerlandeButtonColor,
+            gerlandeButtonColor
           }}>
             <Header/>
             <Routes>

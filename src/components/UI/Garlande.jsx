@@ -136,7 +136,7 @@ const Garlande = () => {
 		],
 	]);
 
-	const {garlandeCheck} = useContext(ContextFilters);
+	const {garlandeCheck, gerlandeButtonColor} = useContext(ContextFilters);
  
 	function hideGarlande(e) {
 		 if(e){
@@ -150,35 +150,35 @@ const Garlande = () => {
 		<div  className={`garland-tree-container ${hideGarlande(garlandeCheck)} `}>
 			<ul className="lightrope" style={{ width: "120px", height: "120px" }}>
 				{lights[0].map(light =>
-					<li key={light.id} className="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
+					<li key={light.id} className={`${gerlandeButtonColor}`} style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
 			</ul>
 			<ul className="lightrope" style={{ width: "170px", height: "170px" }}>
 				{lights[1].map(light =>
-					<li key={light.id} className="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
+					<li key={light.id} className={`${gerlandeButtonColor}`} style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
 			</ul>
 			<ul className="lightrope" style={{ width: "230px", height: "230px" }}>
 				{lights[2].map(light =>
-					<li key={light.id} className="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
+					<li key={light.id} className={`${gerlandeButtonColor}`} style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
 			</ul>
 			<ul className="lightrope" style={{ width: "300px", height: "300px" }}>
 				{lights[3].map(light =>
-						<li key={light.id} className="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
+						<li key={light.id} className={`${gerlandeButtonColor}`} style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
 			</ul>
 			<ul className="lightrope" style={{ width: "380px", height: "380px" }}>
 				{lights[4].map(light =>
-						<li key={light.id} className="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
+						<li key={light.id} className={`${gerlandeButtonColor}`} style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
 			</ul>
 			<ul className="lightrope" style={{ width: "465px", height: "465px" }}>
 				{lights[5].map(light =>
-					<li key={light.id} className="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
+					<li key={light.id} className={`${gerlandeButtonColor}`} style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
 			</ul>
 			<ul className="lightrope" style={{ width: "555px", height: "555px" }}>
 				{lights[6].map(light =>
-						<li key={light.id} className="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
+						<li key={light.id} className={`${gerlandeButtonColor}`} style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
 			</ul>
 			<ul className="lightrope" style={{ width: "650px", height: "650px" }}>
 				{lights[7].map(light =>
-						<li key={light.id} className="multicolor" style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
+						<li key={light.id} className={`${gerlandeButtonColor}`} style={{ transform: `rotate(${light.rotate}deg) translate(${light.translate}px) rotate(-${light.translate}deg)` }}></li>)}
 			</ul>
 		</div>
 	)

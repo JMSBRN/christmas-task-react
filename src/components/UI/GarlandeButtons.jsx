@@ -1,5 +1,6 @@
-import React,{useState} from 'react'
+import React,{useState, useContext} from 'react'
 import OnOFFSwitch from './OnOFFSwitch'
+import { ContextFilters } from '../ContextFilters';
 
 const GarlandeButtons = () => {
   const [btns, setBtns] = useState([
@@ -9,10 +10,11 @@ const GarlandeButtons = () => {
     {class: "yellow-btn", data:"yelow"},
     {class: "green-btn", data:"green"}
 ]);
+const {getGerlandeButtonColor} = useContext(ContextFilters);
   return (
     <div className="garland-container menu-container">
       <div className="garland-btns">
-          {btns.map(btn=> <button key={btn.data} className={`color-btn ${btn.class}`} data-color={btn.data}></button>)}
+          {btns.map(btn=> <button onClick={getGerlandeButtonColor} key={btn.data} className={`color-btn ${btn.class}`} data-color={btn.data}></button>)}
       </div>
       <OnOFFSwitch/>
     </div>
