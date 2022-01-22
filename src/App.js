@@ -9,17 +9,19 @@ import Tree from './components/pages/Tree';
 import Home from './components/pages/Home';
 
 function App() {
-  const [filters, setFilters] = useState({ shape: [], color: [], size: [], favorite: [] })
-  const [selected, setSelected] = useState(0)
-  const [valueCount, setValueCount] = useState([1, 12])
-  const [valueYear, setValueYear] = useState([1940, 2020])
-  const [selectedSort, setSelectedSort] = useState('')
-  const [searchQuery, setSearchQuery] = useState('')
-  const [activeSnow, setActiveSnow] = useState('')
+  const [filters, setFilters] = useState({ shape: [], color: [], size: [], favorite: [] });
+  const [selected, setSelected] = useState(0);
+  const [valueCount, setValueCount] = useState([1, 12]);
+  const [valueYear, setValueYear] = useState([1940, 2020]);
+  const [selectedSort, setSelectedSort] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeSnow, setActiveSnow] = useState('');
   const [favoriteTrees, setFavoriteTrees] = useState(1);
   const [bgMainTrees, setBgMainTrees] = useState(1);
   const [garlandeCheck, setGarlandeCheck] = useState(false);
-  const [gerlandeButtonColor, setGerlandeButtonColor] = useState('multicolor');
+  const [gerlandeButtonColor, setGerlandeButtonColor] = useState('multicolor'); 
+  const [currentDragStartToy, setCurrentDragStartToy] = useState('');
+  const [currentDragEndtToy, setCurrentDragEndtToy] = useState('');
 
   const shapeFromFilters = (filters) => {
     setFilters(filters)
@@ -70,6 +72,12 @@ function App() {
   function getGerlandeButtonColor(e) {
     setGerlandeButtonColor(e.target.dataset.color);
   }
+  function getDragStartValue(e){
+    setCurrentDragStartToy(e.target)
+  }
+  function getDragEndValue(e){
+    setCurrentDragEndtToy(e.target)
+  }
   return (
     <Router >
       <div className="App">
@@ -96,7 +104,11 @@ function App() {
             getGarlandeCheck,
             garlandeCheck,
             getGerlandeButtonColor,
-            gerlandeButtonColor
+            gerlandeButtonColor,
+            getDragStartValue,
+            currentDragStartToy,
+            getDragEndValue,
+            currentDragEndtToy
           }}>
             <Header/>
             <Routes>

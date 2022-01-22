@@ -1,23 +1,15 @@
 import React from 'react';
 import images  from  '../assets/toys/1.png'
 
-const FavoriteAsideToy = ({toy,onDragStart, onDragLeave, onDragEnd, onDragOver, onDrop}) => {
+const FavoriteAsideToy = ({toy,onDragStart, onDragEnd}) => {
 	images= require(`../assets/toys/${toy.id}.png`);
 	function dragHandlerStart(e) {
 		onDragStart(e);
 	}
-	function dragHandlerLeave(e) {
-		onDragLeave(e);
-	}
 	function dragHandlerEnd(e) {
 		onDragEnd(e);
 	}
-	function dragHandlerOver(e) {
-		onDragOver(e);
-	}
-	function dragHandDrop(e) {
-		onDrop(e);
-	}
+
 	return (
 	<div 
 		key={toy.id} 
@@ -25,10 +17,7 @@ const FavoriteAsideToy = ({toy,onDragStart, onDragLeave, onDragEnd, onDragOver, 
 		draggable="true"  
 		data-num={toy.count}
 		onDragStart={dragHandlerStart}
-		onDragLeave={dragHandlerLeave}
 		onDragEnd={dragHandlerEnd}
-		onDragOver={dragHandlerOver}
-		onDrop={dragHandDrop}
 	>
 		<p className="favorites-count">{toy.count}</p>
 		<img className="favorites-card-img"

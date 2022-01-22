@@ -1,9 +1,10 @@
-import React,{useState} from 'react'
+import React,{useContext} from 'react'
 import FavoriteAsideToy from './FavoriteAsideToy';
+import { ContextFilters } from '../ContextFilters';
 
 const TreeFavoriteAsideToys = () => {
 
-const [currentToy, setCurrentToy] = useState(null);
+	const {getDragStartValue, getDragEndValue} = useContext(ContextFilters);
 
  const FavoriteToys = [
    {id: "1", data: "1", count: "1",},
@@ -28,27 +29,7 @@ const [currentToy, setCurrentToy] = useState(null);
  ];
 
 
-
- function getStartValue(e){
-	console.log("start", e.target.id);
- }
-
- function getLeaveValue(e){
-	 console.log("leave",e.target.id);
- }
- function getEndValue(e){
-   e.preventDefault();
-	 console.log("end",e.target.id);
- }
- function getOverValue(e){
-	e.preventDefault();
-	console.log("over",e.target.id);
- }
- function getDropValue(e){
-
-	 console.log("drop",e.target.id);
- }
-
+ 
 	return (
 		<div className="favorites-container">
 		   { 
@@ -56,11 +37,9 @@ const [currentToy, setCurrentToy] = useState(null);
 					<FavoriteAsideToy 
 					 key={toy.id}
 					 toy={toy}
-					 onDragStart={getStartValue}
-					 onDragLeave={getLeaveValue}
-					 onDragEnd={getEndValue}
-					 onDragOver={getOverValue}
-					 onDrop={getDropValue}
+					  onDragStart={getDragStartValue}
+					  onDragEnd={getDragEndValue}
+					 
 					 />
 					)
 			 }
