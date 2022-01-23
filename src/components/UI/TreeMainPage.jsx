@@ -15,7 +15,7 @@ const TreeMainPage = () => {
 	images = require(`../assets/tree/${favoriteTrees}.png`)
 
 	setTimeout(()=>{
-		const dragedDiv = document.querySelector('.draged-toys');
+		const dragedDiv = document.querySelector('.tree-map');
 		function dragOver(e) {
 			e.preventDefault();
 			//console.log("over");
@@ -27,7 +27,9 @@ const TreeMainPage = () => {
 			//console.log("leave");
 		}
 		function dragDrop(e) {
-			//console.log("drop");
+			//console.log("screenY",e);
+			
+		
 			dragedDiv.append(currentDragStartToy)
 		}
 		dragedDiv.addEventListener('dragover', dragOver)
@@ -44,9 +46,13 @@ const TreeMainPage = () => {
 		<div className={`snowflakes ${toggleSnow(activeSnow)}`}>
 			<div className="snowflakes"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 		</div>
-		<div className='draged-toys'></div>
+		
 		<Garlande/>
-      <img src={images} className="main-tree" useMap="#tree-map" alt="tree"/>
+		<img src={images} className="main-tree" useMap="#tree-map" alt="tree"/>
+		<map id='tree-map' className='tree-map' name="tree-map">
+          <area  shape="poly" coords="365,699,189,706,113,683,31,608,2,555,2,539,18,437,73,351,106,224,161,134,243,-1,306,75,353,144,399,221,424,359,452,459,496,550,444,664"/>
+        </map>
+      
 	</div>
 	)
 }
