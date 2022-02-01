@@ -5,7 +5,7 @@ import bgs from '../assets/bg/1.jpg'
 import Garlande from './Garlande';
 
 const TreeMainPage = () => {
-	const { activeSnow, favoriteTrees, bgMainTrees, currentDragStartToy, currentDragEndtToy } = useContext(ContextFilters);
+	const { activeSnow, favoriteTrees, bgMainTrees, currentDragStartToy, style} = useContext(ContextFilters);
 	const toggleSnow = (e) => {
 		if (!e) {
 			return "hide"
@@ -26,11 +26,11 @@ const TreeMainPage = () => {
 		function dragLeave(e) {
 			//console.log("leave");
 		}
-		function dragDrop(e) {
-			//console.log("screenY",e);
-			
-		
-			dragedDiv.append(currentDragStartToy)
+		function dragDrop(e) {		
+
+    console.log(	currentDragStartToy.style);
+			dragedDiv.append(currentDragStartToy);
+			//currentDragStartToy.style.top= `${e.screenY}`
 		}
 		dragedDiv.addEventListener('dragover', dragOver)
 		dragedDiv.addEventListener('dragenter', dragEnter)
@@ -48,11 +48,11 @@ const TreeMainPage = () => {
 		</div>
 		
 		<Garlande/>
-		<img src={images} className="main-tree" useMap="#tree-map" alt="tree"/>
+		<img src={images} className="main-tree" useMap="#tree-map" alt="tree"/>  
 		<map id='tree-map' className='tree-map' name="tree-map">
-          <area  shape="poly" coords="365,699,189,706,113,683,31,608,2,555,2,539,18,437,73,351,106,224,161,134,243,-1,306,75,353,144,399,221,424,359,452,459,496,550,444,664"/>
+          <area  shape="poly" coords="365,699,189,706,113,683,31,608,2,555,2,539,18,437,73,351,106,224,161,134,243,-1,306,75,353,144,399,221,424,359,452,459,496,550,444,664" alt="area-main-tree"/>
         </map>
-      
+				 
 	</div>
 	)
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import images  from  '../assets/toys/1.png'
 
-const FavoriteAsideToy = ({toy,onDragStart, onDragEnd}) => {
+const FavoriteAsideToy = ({toy,onDragStart, onDragEnd, style}) => {
 	images= require(`../assets/toys/${toy.id}.png`);
 	function dragHandlerStart(e) {
 		onDragStart(e);
@@ -25,6 +25,7 @@ const FavoriteAsideToy = ({toy,onDragStart, onDragEnd}) => {
 		 alt="toy" 
 		 id={toy.id} 
 		 data-imgnum={toy.data}
+		 style={style}
 		 />
 	</div>
 		

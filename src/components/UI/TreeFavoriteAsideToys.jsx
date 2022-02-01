@@ -4,7 +4,7 @@ import { ContextFilters } from '../ContextFilters';
 
 const TreeFavoriteAsideToys = () => {
 
-	const {getDragStartValue, getDragEndValue} = useContext(ContextFilters);
+	const {getDragStartValue, getDragEndValue, getStyle} = useContext(ContextFilters);
 
  const FavoriteToys = [
    {id: "1", data: "1", count: "1",},
@@ -29,7 +29,6 @@ const TreeFavoriteAsideToys = () => {
  ];
 
 
- 
 	return (
 		<div className="favorites-container">
 		   { 
@@ -39,7 +38,7 @@ const TreeFavoriteAsideToys = () => {
 					 toy={toy}
 					  onDragStart={getDragStartValue}
 					  onDragEnd={getDragEndValue}
-					 
+            style={{getStyle}}
 					 />
 					)
 			 }

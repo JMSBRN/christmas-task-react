@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Toys from './components/pages/Toys';
@@ -7,6 +7,7 @@ import './css/App.css';
 import { ContextFilters } from './components/ContextFilters'
 import Tree from './components/pages/Tree';
 import Home from './components/pages/Home';
+import NotFound from './components/pages/NotFound';
 
 function App() {
   const [filters, setFilters] = useState({ shape: [], color: [], size: [], favorite: [] });
@@ -22,6 +23,7 @@ function App() {
   const [gerlandeButtonColor, setGerlandeButtonColor] = useState('multicolor'); 
   const [currentDragStartToy, setCurrentDragStartToy] = useState('');
   const [currentDragEndtToy, setCurrentDragEndtToy] = useState('');
+  const [style, setStyle] = useState('200px');
 
   const shapeFromFilters = (filters) => {
     setFilters(filters)
@@ -78,8 +80,10 @@ function App() {
   function getDragEndValue(e){
     setCurrentDragEndtToy(e.target)
   }
+  function getStyle(e){
+    setStyle(e.target)
+  }
   return (
-    <Router >
       <div className="App">
         <ContextFilters.Provider
           value={{
@@ -108,19 +112,20 @@ function App() {
             getDragStartValue,
             currentDragStartToy,
             getDragEndValue,
-            currentDragEndtToy
+            currentDragEndtToy,
+            getStyle,
+            style
           }}>
             <Header/>
             <Routes>
-              <Route path="*" element={<Home/>}/>
               <Route path="/home" element={<Home/>}/>
               <Route path="/toys" element={<Toys/>}/>
               <Route path="/tree" element={<Tree/>}/>
+              <Route path="*" element={<NotFound/>}/>
             </Routes>
             <Footer/>
         </ContextFilters.Provider>
       </div>
-    </Router>
   );
 }
 export default App;

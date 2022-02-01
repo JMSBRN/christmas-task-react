@@ -40,17 +40,12 @@
   height: 714px;
 }
 
-.tree-map {
+map {
+  display: inline;
+}
+map img  {
   position: absolute;
-  gap: 10px;
-  background-color: rgba(196, 37, 37, 0.4);
 }
-
-.tree-map img {
-  position: relative;
-  display: block;
-}
-
 .favorites-aside {
   height: calc(100vh - 140px);
   min-height: 750px;
