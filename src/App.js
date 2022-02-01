@@ -118,9 +118,10 @@ function App() {
           }}>
             <Header/>
             <Routes>
-              <Route path="/home" element={<Home/>}/>
-              <Route path="/toys" element={<Toys/>}/>
-              <Route path="/tree" element={<Tree/>}/>
+              <Route path="/christmas-task-react/" element={<Home/>}/>
+              <Route path="/christmas-task-react/home" element={<Home/>}/>
+              <Route path="/christmas-task-react/toys" element={<Toys/>}/>
+              <Route path="/christmas-task-react/tree" element={<Tree/>}/>
               <Route path="*" element={<NotFound/>}/>
             </Routes>
             <Footer/>

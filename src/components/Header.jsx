@@ -9,11 +9,11 @@ const Header = () => {
 	return (
 		<header className="header">
 			<nav className="nav-bar">
-				<Link to="/home">
+				<Link to="/christmas-task-react/home">
 					<img className='header-logo-tree' src={logoTree} alt="logo-tree"/>
 				</Link>
-				<Link to="/toys">Игрушки</Link>
-				<Link to="/tree">Ёлка</Link>
+				<Link to="/christmas-task-react/toys">Игрушки</Link>
+				<Link to="/christmas-task-react/tree">Ёлка</Link>
 			</nav>
 			<input className="header-search" onChange={handleSearchInput} autoComplete='off' type="search" />
 		  <SelectHeader />
