@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import {Routes, Route} from 'react-router-dom'
-import Footer from './components/Footer';
-import Header from './components/Header';
 import Toys from './components/pages/Toys';
 import './css/App.css';
 import { ContextFilters } from './components/ContextFilters'
 import Tree from './components/pages/Tree';
 import Home from './components/pages/Home';
 import NotFound from './components/pages/NotFound';
+import Layout from './components/Layout';
 
 function App() {
   const [filters, setFilters] = useState({ shape: [], color: [], size: [], favorite: [] });
@@ -116,15 +115,15 @@ function App() {
             getStyle,
             style
           }}>
-            <Header/>
             <Routes>
-              <Route path="/christmas-task-react/" element={<Home/>}/>
-              <Route path="/christmas-task-react/home" element={<Home/>}/>
-              <Route path="/christmas-task-react/toys" element={<Toys/>}/>
-              <Route path="/christmas-task-react/tree" element={<Tree/>}/>
-              <Route path="*" element={<NotFound/>}/>
+              <Route path="/christmas-task-react/" element={<Layout/>}>
+                <Route index element={<Home/>}/>
+                <Route path="home" element={<Home/>}/>
+                <Route path="toys" element={<Toys/>}/>
+                <Route path="tree" element={<Tree/>}/>
+                <Route path="*" element={<NotFound/>}/>
+              </Route>
             </Routes>
-            <Footer/>
         </ContextFilters.Provider>
       </div>
   );
